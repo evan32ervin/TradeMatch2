@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +6,12 @@
 <title>TradeMatch — Local Pros. Real Solutions.</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-
 :root{
-  --blue:#1769e8; --blue2:#0b4fc4; --navy:#0b1d38; --ink:#10213d;
-  --muted:#66758b; --line:#dbe5f2; --bg:#f5f8fc; --white:#fff;
-  --green:#18a66a; --shadow:0 12px 35px rgba(16,33,61,.09);
+--blue:#1769e8; --blue2:#0b4fc4; --navy:#0b1d38; --ink:#10213d;
+--muted:#66758b; --line:#dbe5f2; --bg:#f5f8fc; --white:#fff;
+--green:#18a66a; --shadow:0 12px 35px rgba(16,33,61,.09);
 }
-*{box-sizing:border-box}
+{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
 button{font:inherit;cursor:pointer}
 a{text-decoration:none;color:inherit}
@@ -26,10 +24,8 @@ a{text-decoration:none;color:inherit}
 .portal-switch button.active{background:var(--blue);color:#fff;box-shadow:0 5px 16px rgba(23,105,232,.35)}
 .location{border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:22px;font-size:13px;white-space:nowrap}
 .profile-menu{position:relative;display:flex;align-items:center}.avatar{width:40px;height:40px;border-radius:50%;border:2px solid rgba(255,255,255,.65);object-fit:cover;display:block;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.18)}.profile-trigger{border:0;background:transparent;color:#fff;display:flex;align-items:center;gap:7px;padding:3px;border-radius:22px}.profile-trigger:hover{background:rgba(255,255,255,.1)}.profile-chevron{font-size:11px;opacity:.8}.profile-dropdown{position:absolute;right:0;top:52px;width:205px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 35px rgba(16,33,61,.18);padding:8px;display:none;z-index:100}.profile-dropdown.open{display:block}.profile-dropdown-head{display:flex;align-items:center;gap:10px;padding:10px;border-bottom:1px solid #edf1f6;margin-bottom:5px}.profile-dropdown-head img{width:38px;height:38px;border-radius:50%;object-fit:cover}.profile-dropdown-head strong{display:block;font-size:12px}.profile-dropdown-head span{display:block;color:var(--muted);font-size:10px;margin-top:2px}.profile-dropdown button{width:100%;border:0;background:transparent;text-align:left;padding:11px 10px;border-radius:8px;font-size:12px;font-weight:700;color:#34465f}.profile-dropdown button:hover{background:#f1f6fd;color:#1769e8}.profile-dropdown .signout{color:#d83a3a}.profile-dropdown .signout:hover{background:#fff1f1;color:#c62828}
-
 .view{display:none}.view.active{display:block}
-
-/* CUSTOMER */
+/* CUSTOMER /
 .customer{min-height:calc(100vh - 74px);background:linear-gradient(180deg,#fff 0%,#f6f9fd 100%)}
 .hero{position:relative;overflow:hidden;padding:58px 6% 36px;min-height:560px;background:
 linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.92) 47%,rgba(255,255,255,.20) 100%),
@@ -54,8 +50,7 @@ url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=c
 .pro img{width:58px;height:58px;border-radius:50%;object-fit:cover}.pro b{font-size:14px}.rating{color:#f2a900;font-size:12px;margin-top:5px}.tag{display:inline-block;background:#edf5ff;color:#1769e8;padding:3px 8px;border-radius:20px;font-size:10px;font-weight:700;margin-top:6px}
 .how{position:absolute;right:5%;bottom:28px;width:490px;background:rgba(7,27,53,.91);color:#fff;border-radius:15px;padding:20px 23px;box-shadow:0 18px 50px rgba(7,27,53,.22)}
 .how h3{margin:0 0 15px;font-family:"Space Grotesk"}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{border-left:1px solid rgba(255,255,255,.2);padding-left:14px}.step:first-child{border-left:0}.num{width:30px;height:30px;border-radius:50%;background:#1769e8;display:grid;place-items:center;font-weight:700;margin-bottom:8px}.step b{font-size:12px}.step p{font-size:10px;color:#b9c7d9;line-height:1.45}
-
-/* CONTRACTOR */
+/* CONTRACTOR /
 .contractor{min-height:calc(100vh - 74px);display:grid;grid-template-columns:235px 1fr;background:#f6f8fc}
 .sidebar{background:linear-gradient(180deg,#091a32,#102747);color:#fff;padding:24px 14px;min-height:calc(100vh - 74px)}
 .side-logo{font-family:"Space Grotesk";font-size:24px;font-weight:700;padding:0 12px 28px}
@@ -66,15 +61,12 @@ url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=c
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:16px}.metric{background:#fff;border:1px solid var(--line);border-radius:12px;padding:17px;box-shadow:0 4px 15px rgba(16,33,61,.04)}.metric-label{font-size:11px;color:var(--muted)}.metric-value{font-family:"Space Grotesk";font-size:25px;font-weight:700;margin-top:5px}.delta{font-size:10px;color:#1a9b68;margin-top:4px}
 .dashboard-grid{display:grid;grid-template-columns:1.45fr .9fr;gap:15px}.panel{background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:0 4px 15px rgba(16,33,61,.04)}.panel-head{padding:15px 18px;border-bottom:1px solid #edf1f6;display:flex;justify-content:space-between;font-family:"Space Grotesk";font-weight:700}.job{padding:16px 18px;border-bottom:1px solid #edf1f6;display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center}.job:last-child{border-bottom:0}.job b{font-size:13px}.job small{display:block;color:var(--muted);font-size:10px;margin-top:5px}.price{font-weight:700;font-size:12px}.quote{border:0;background:#1769e8;color:#fff;border-radius:8px;padding:9px 13px;font-size:11px;font-weight:700}.quote:hover{background:#0b4fc4}.right-stack{display:grid;gap:15px}.map{height:155px;background:linear-gradient(135deg,#dcecf8,#eef5f9);position:relative;overflow:hidden}.map:after{content:"";position:absolute;inset:25px 10%;border:2px dashed #91b7d7;border-radius:45% 55% 42% 58%}.pins{position:absolute;inset:0}.pin{position:absolute;width:13px;height:13px;border-radius:50% 50% 50% 0;background:#1769e8;transform:rotate(-45deg);box-shadow:0 2px 7px rgba(23,105,232,.35)}.pin:nth-child(1){left:30%;top:42%}.pin:nth-child(2){left:70%;top:31%}.pin:nth-child(3){left:53%;top:66%}.quick{padding:15px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.quick button{border:1px solid #dce5f0;background:#fff;border-radius:9px;padding:11px;font-size:11px;text-align:left;color:#34465f}.quick button:hover{border-color:#9fc4f3;color:#1769e8}
 
-
-
 .back-dashboard{border:0;background:transparent;color:#1769e8;font-weight:700;font-size:12px;padding:0}
 .contractor-page{display:none}.contractor-page.active{display:block}
 .schedule-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-bottom:18px}.day{background:#f7f9fc;border:1px solid #e2e8f0;border-radius:9px;padding:13px;text-align:center}.day b{display:block;font-size:9px;color:#718096}.day strong{display:block;font-family:"Space Grotesk";font-size:21px;margin:4px 0}.day span{font-size:9px;color:#718096}.day.selected{border-color:#1769e8;background:#edf5ff}.day.selected strong,.day.selected span{color:#1769e8}
 .schedule-item,.payment-row{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-top:1px solid #edf1f6;font-size:12px}.schedule-item small{display:block;color:#718096;margin-top:4px;font-size:10px}.status-confirmed{background:#e8f8ef;color:#128052;border-radius:15px;padding:5px 9px;font-size:9px;font-weight:700}.status-pending{background:#fff5df;color:#a36a00;border-radius:15px;padding:5px 9px;font-size:9px;font-weight:700}
 .message-row{display:flex;align-items:center;gap:12px;padding:17px 18px;border-bottom:1px solid #edf1f6;cursor:pointer}.message-row:hover{background:#f8fbff}.message-row>div:nth-child(2){flex:1}.message-row small{display:block;color:#718096;font-size:10px;margin-top:4px}.message-avatar{width:40px;height:40px;border-radius:50%;background:#e5effd;color:#1769e8;display:grid;place-items:center;font-weight:700;font-size:11px}.message-row>strong{background:#1769e8;color:#fff;border-radius:10px;padding:2px 6px;font-size:9px}
 .profile-edit-card{background:#fff;border:1px solid #dbe5f2;border-radius:13px;padding:25px;box-shadow:0 4px 15px rgba(16,33,61,.04)}.profile-edit-top{display:flex;gap:15px;align-items:center;padding-bottom:22px;border-bottom:1px solid #edf1f6}.profile-edit-top img{width:72px;height:72px;border-radius:50%;object-fit:cover}.profile-edit-top h2{font-family:"Space Grotesk";margin:0}.profile-edit-top p{font-size:12px;color:#718096;margin:5px 0}.edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:20px}.edit-grid label{font-size:10px;font-weight:700;color:#50637c}.edit-grid input,.edit-grid select,.edit-grid textarea{display:block;width:100%;margin-top:6px;border:1px solid #d6e0ec;border-radius:8px;padding:11px;background:#fff;font:inherit;font-size:12px}.edit-grid textarea{min-height:90px;resize:vertical}.save-profile{margin-top:18px;height:42px}
-
 #matchingResults{background:#f7faff;border-top:1px solid #e2eaf5;border-bottom:1px solid #e2eaf5}
 #matchingResults .pro{position:relative;align-items:flex-start}
 .pro-info{flex:1}.pro-distance{font-size:10px;color:#718096;margin-top:4px}
@@ -82,7 +74,6 @@ url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=c
 .pro-available i{width:7px;height:7px;border-radius:50%;background:#18a66a;display:inline-block}
 .book-pro{margin-top:10px;border:0;background:#1769e8;color:#fff;border-radius:8px;padding:8px 11px;font-size:11px;font-weight:700}
 .book-pro:hover{background:#0b4fc4}
-
 
 .profile-modal{position:fixed;inset:0;background:rgba(5,18,36,.62);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px;z-index:90}
 .profile-modal.open{display:flex}
@@ -97,7 +88,6 @@ url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=c
 .profile-rating{color:#efa900;font-weight:700;margin-top:8px;font-size:13px}
 .book-main{border:0;background:#1769e8;color:#fff;border-radius:10px;padding:13px 20px;font-weight:700;white-space:nowrap;box-shadow:0 7px 18px rgba(23,105,232,.22)}
 .book-main:hover{background:#0b4fc4}
-
 .featured-pro{width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer;border:0}.featured-pro small{display:block;color:#1769e8;font-size:10px;font-weight:700;margin-top:7px}.featured-pro:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(16,33,61,.13)}
 .contact-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.contact-action{border:1px solid #dbe5f2;background:#fff;border-radius:9px;padding:10px 8px;color:#1769e8;font-weight:700;font-size:11px;text-align:center}.contact-action:hover{background:#edf5ff}.company-line{font-size:12px;color:#66758b;margin:8px 0 0}.company-line strong{color:#10213d}
 .profile-sections{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-top:25px}
@@ -110,42 +100,38 @@ url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=c
 .booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.booking-grid input,.booking-grid select,.booking-grid textarea{border:1px solid #d6e0ec;border-radius:8px;padding:11px;background:#fff;font:inherit;font-size:12px}.booking-grid textarea{grid-column:1/-1;min-height:70px;resize:vertical}
 .confirm-book{grid-column:1/-1;border:0;background:#18a66a;color:#fff;border-radius:9px;padding:12px;font-weight:700}
 @media(max-width:650px){.profile-head{display:block}.book-main{width:100%;margin-top:15px}.profile-sections{grid-template-columns:1fr}.booking-grid{grid-template-columns:1fr}.booking-grid textarea,.confirm-book{grid-column:auto}}
-
 @media(max-width:900px){
-  .topbar{padding:0 15px}.logo{min-width:auto}.location{display:none}.portal-switch{margin-left:auto}
-  .hero{padding:42px 22px 300px}.hero h1{font-size:42px}.how{left:22px;right:22px;width:auto}
-  .section{padding-left:22px;padding-right:22px}.services{grid-template-columns:repeat(3,1fr)}.pros{grid-template-columns:1fr}
-  .contractor{grid-template-columns:1fr}.sidebar{display:none}.metrics{grid-template-columns:repeat(2,1fr)}.dashboard-grid{grid-template-columns:1fr}
+.topbar{padding:0 15px}.logo{min-width:auto}.location{display:none}.portal-switch{margin-left:auto}
+.hero{padding:42px 22px 300px}.hero h1{font-size:42px}.how{left:22px;right:22px;width:auto}
+.section{padding-left:22px;padding-right:22px}.services{grid-template-columns:repeat(3,1fr)}.pros{grid-template-columns:1fr}
+.contractor{grid-template-columns:1fr}.sidebar{display:none}.metrics{grid-template-columns:repeat(2,1fr)}.dashboard-grid{grid-template-columns:1fr}
 }
 @media(max-width:600px){
-  .topbar{height:64px}.logo{font-size:20px}.logo small{display:none}.portal-switch button{padding:9px 12px}.avatar{display:none}
-  .request{grid-template-columns:1fr}.request .primary{height:48px}.services{grid-template-columns:repeat(2,1fr)}
-  .hero h1{font-size:36px}.how{padding:15px}.steps{gap:7px}.step p{font-size:9px}
-  .dash{padding:20px 14px}.metrics{grid-template-columns:1fr 1fr}.job{grid-template-columns:1fr}.quote{width:100%}
+.topbar{height:64px}.logo{font-size:20px}.logo small{display:none}.portal-switch button{padding:9px 12px}.avatar{display:none}
+.request{grid-template-columns:1fr}.request .primary{height:48px}.services{grid-template-columns:repeat(2,1fr)}
+.hero h1{font-size:36px}.how{padding:15px}.steps{gap:7px}.step p{font-size:9px}
+.dash{padding:20px 14px}.metrics{grid-template-columns:1fr 1fr}.job{grid-template-columns:1fr}.quote{width:100%}
 }
-
 .contractor-page{scroll-margin-top:95px}
 #contractorPages{scroll-margin-top:95px}
-
 #nearbyMapModal{
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  align-items:center;
-  justify-content:center;
-  padding:24px;
-  background:rgba(15,23,42,.58);
-  backdrop-filter:blur(4px);
+position:fixed;
+inset:0;
+z-index:9999;
+align-items:center;
+justify-content:center;
+padding:24px;
+background:rgba(15,23,42,.58);
+backdrop-filter:blur(4px);
 }
 #nearbyMapModal .modal-card{
-  position:relative;
-  width:100%;
-  background:#fff;
-  border-radius:22px;
-  padding:28px;
-  box-shadow:0 24px 70px rgba(15,23,42,.28);
+position:relative;
+width:100%;
+background:#fff;
+border-radius:22px;
+padding:28px;
+box-shadow:0 24px 70px rgba(15,23,42,.28);
 }
-
 <style>
 .nearby-map-card{max-width:1100px!important;width:calc(100vw - 48px)!important;padding:24px!important}
 .nearby-map-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:18px}
@@ -176,17 +162,16 @@ url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=c
 .leaflet-job-title{font-weight:800;color:#0f172a;margin-bottom:4px}
 .leaflet-job-meta{font-size:12px;color:#64748b}
 @media(max-width:850px){
-  .map-layout{grid-template-columns:1fr}
-  #tradeMap,.map-jobs{height:420px}
-  .nearby-map-head{flex-direction:column}
+.map-layout{grid-template-columns:1fr}
+#tradeMap,.map-jobs{height:420px}
+.nearby-map-head{flex-direction:column}
 }
 </style>
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
- integrity="sha256-p4NxAoJBhIINfQ3F8d0qXhX3V5e4d7g7c6xj4M9jK6s=" crossorigin=""/>
+integrity="sha256-p4NxAoJBhIINfQ3F8d0qXhX3V5e4d7g7c6xj4M9jK6s=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
- integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <style>
 .nearby-inline-panel{margin:24px 0;padding:24px;background:#fff;border:1px solid #e2e8f0;border-radius:22px;box-shadow:0 12px 35px rgba(15,23,42,.08)}
 .nearby-inline-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:18px}
@@ -212,7 +197,6 @@ url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=c
 .nearby-inline-footer a{color:#2563eb;font-weight:800;text-decoration:none;font-size:13px}
 @media(max-width:900px){.nearby-inline-grid{grid-template-columns:1fr}.nearby-inline-map,.nearby-inline-list{height:400px}.nearby-inline-head{flex-direction:column}}
 </style>
-
 <style>
 .nearby-card .panel-head button:hover{text-decoration:underline}
 .map-preview{height:155px;border-radius:12px;position:relative;overflow:hidden;border:1px solid #d7dee8;background:
@@ -224,7 +208,6 @@ linear-gradient(0deg,#dbe7d3,#e9edf2);background-size:100% 100%}
 .preview-job{position:absolute;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:9px;font-weight:900;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.22)}
 .preview-job.p1{left:27%;top:39%;background:#2563eb}.preview-job.p2{left:53%;top:26%;background:#f59e0b}.preview-job.p3{left:67%;top:57%;background:#0ea5e9}.preview-job.p4{left:41%;top:70%;background:#dc2626}
 </style>
-
 <style>
 .job-details-overlay{position:fixed;inset:0;background:rgba(15,23,42,.66);z-index:10000;display:flex;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(3px)}
 .job-details-card{background:#fff;width:min(920px,96vw);max-height:92vh;overflow:auto;border-radius:22px;box-shadow:0 25px 80px rgba(15,23,42,.35);position:relative}
@@ -236,9 +219,7 @@ linear-gradient(0deg,#dbe7d3,#e9edf2);background-size:100% 100%}
 .quote-box{border:1px solid #dbe3ee;border-radius:14px;padding:17px;display:flex;align-items:center;justify-content:space-between;gap:20px}.quote-box p{margin:0;color:#64748b;font-size:12px}.price-entry{display:flex;align-items:center;border:2px solid #2563eb;border-radius:12px;overflow:hidden;background:#fff}.price-entry span{font-size:22px;font-weight:800;padding-left:13px;color:#334155}.price-entry input{width:135px;border:0;outline:0;font-size:24px;font-weight:800;padding:10px 12px}.suggested-prices{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.suggested-prices button{border:1px solid #cbd5e1;background:#fff;border-radius:9px;padding:7px 11px;font-size:12px;font-weight:700;cursor:pointer}.suggested-prices button:hover{border-color:#2563eb;color:#2563eb}.submit-quote{width:100%;border:0;background:#1769e8;color:#fff;border-radius:11px;padding:13px;font-weight:800;font-size:14px;cursor:pointer}.submit-quote:hover{background:#0b4fc4}
 @media(max-width:700px){.job-details-gallery{height:210px;grid-template-columns:1fr 1fr}.job-details-gallery img:first-child{grid-column:1/-1}.quote-box{flex-direction:column;align-items:stretch}.price-entry input{width:100%}}
 </style>
-
 <style id="contractor-auth-styles">#contractorAuthScreen{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;background:linear-gradient(135deg,#071a31,#0b3158 55%,#0a6b8c);font-family:Inter,system-ui,sans-serif}#contractorAuthScreen.auth-hidden{display:none}.auth-card{width:min(460px,100%);box-sizing:border-box;background:#fff;border-radius:24px;padding:34px;box-shadow:0 28px 80px rgba(0,0,0,.35)}.auth-brand{font-size:30px;font-weight:950;color:#0b2545}.auth-subtitle{color:#64748b;margin:4px 0 24px}.auth-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#eef3f8;padding:4px;border-radius:12px;margin-bottom:22px}.auth-tab{border:0;background:transparent;border-radius:9px;padding:11px;font-weight:850;color:#64748b;cursor:pointer}.auth-tab.active{background:#fff;color:#0b2545;box-shadow:0 2px 8px rgba(0,0,0,.09)}.auth-panel{display:none}.auth-panel.active{display:block}.auth-label{display:block;font-size:13px;font-weight:850;color:#334155;margin:14px 0 7px}.auth-input{width:100%;box-sizing:border-box;border:1px solid #d5dee8;border-radius:11px;padding:13px 14px;font-size:15px;outline:none}.auth-password{position:relative}.auth-password .auth-input{padding-right:68px}.auth-show{position:absolute;right:9px;top:7px;border:0;background:#f1f5f9;color:#475569;border-radius:8px;padding:7px 9px;font-weight:750;cursor:pointer}.auth-primary{width:100%;border:0;border-radius:12px;background:#0b2545;color:#fff;padding:14px;margin-top:20px;font-weight:900;font-size:15px;cursor:pointer}.auth-message{display:none;margin-top:13px;border-radius:10px;padding:10px 12px;font-size:13px}.auth-error{background:#fff1f2;color:#be123c;border:1px solid #fecdd3}.auth-success{background:#ecfdf5;color:#047857;border:1px solid #a7f3d0}.auth-note{text-align:center;color:#64748b;font-size:12px;line-height:1.5;margin-top:16px}.auth-footer{text-align:center;color:#94a3b8;font-size:11px;margin-top:17px}</style>
-
 <style id="contractor-only-mode-style">
 body.contractor-only-mode #customerView,
 body.contractor-only-mode .customer-view,
@@ -247,319 +228,294 @@ body.contractor-only-mode .customer-page,
 body.contractor-only-mode [data-customer-side],
 body.contractor-only-mode .customer-nav,
 body.contractor-only-mode .customer-only {
-  display:none !important;
+display:none !important;
 }
 body.contractor-only-mode .contractor-view,
 body.contractor-only-mode #contractorView,
 body.contractor-only-mode #contractorDashboard,
 body.contractor-only-mode .contractor-only {
-  display:block !important;
+display:block !important;
 }
 body.contractor-only-mode #contractorAuthScreen {
-  display:none !important;
+display:none !important;
 }
 </style>
-
 </head>
-<body><div id="contractorAuthScreen"><div class="auth-card"><div class="auth-brand">TradeMatch</div><div class="auth-subtitle">Contractor Portal · Demo Access</div><div class="auth-tabs"><button class="auth-tab active" id="authLoginTab" onclick="switchContractorAuth('login')">Log In</button><button class="auth-tab" id="authSignupTab" onclick="switchContractorAuth('signup')">Sign Up</button></div><div id="contractorLoginPanel" class="auth-panel active"><label class="auth-label">Email</label><input id="contractorLoginEmail" class="auth-input" type="email" placeholder="you@example.com"><label class="auth-label">Secure Password</label><div class="auth-password"><input id="contractorLoginPassword" class="auth-input" type="password" placeholder="Enter your password"><button class="auth-show" onclick="toggleContractorPassword('contractorLoginPassword',this)">Show</button></div><button class="auth-primary" onclick="contractorPortalLogin()">Log In to Contractor Portal</button><div id="contractorLoginError" class="auth-message auth-error"></div></div><div id="contractorSignupPanel" class="auth-panel"><label class="auth-label">Full Name</label><input id="contractorSignupName" class="auth-input" type="text" placeholder="Your full name"><label class="auth-label">Email</label><input id="contractorSignupEmail" class="auth-input" type="email" placeholder="you@example.com"><label class="auth-label">Secure Password</label><div class="auth-password"><input id="contractorSignupPassword" class="auth-input" type="password" placeholder="At least 8 characters"><button class="auth-show" onclick="toggleContractorPassword('contractorSignupPassword',this)">Show</button></div><label class="auth-label">Confirm Password</label><input id="contractorSignupConfirm" class="auth-input" type="password" placeholder="Re-enter your password"><button class="auth-primary" onclick="createContractorAccount()">Create Contractor Account</button><div id="contractorSignupError" class="auth-message auth-error"></div><div id="contractorSignupSuccess" class="auth-message auth-success"></div></div><div class="auth-note">Demo mode: any non-empty email and password will be accepted. You can switch to real authentication later.<br>Prototype login state is stored locally in this browser.</div>
+<body><div id="contractorAuthScreen"><div class="auth-card"><div class="auth-brand">TradeMatch</div><div class="auth-subtitle">Contractor Portal · Demo Access</div><div class="auth-tabs"><button class="auth-tab active" id="authLoginTab" onclick="switchContractorAuth('login')">Log In</button><button class="auth-tab" id="authSignupTab" onclick="switchContractorAuth('signup')">Sign Up</button></div><div id="contractorLoginPanel" class="auth-panel active"><label class="auth-label">Email</label><input id="contractorLoginEmail" class="auth-input" type="email" placeholder="you@example.com"><label class="auth-label">Secure Password</label><div class="auth-password"><input id="contractorLoginPassword" class="auth-input" type="password" placeholder="Enter your password"><button class="auth-show" onclick="toggleContractorPassword('contractorLoginPassword',this)">Show</button></div><button class="auth-primary" onclick="contractorPortalLogin()">Log In to Contractor Portal</button><div id="contractorLoginError" class="auth-message auth-error"></div></div><div id="contractorSignupPanel" class="auth-panel"><label class="auth-label">Full Name</label><input id="contractorSignupName" class="auth-input" type="text" placeholder="Your full name"><label class="auth-label">Email</label><input id="contractorSignupEmail" class="auth-input" type="text" inputmode="email" autocomplete="email" placeholder="Enter any email" oninvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')"><label class="auth-label">Secure Password</label><div class="auth-password"><input id="contractorSignupPassword" class="auth-input" type="password" placeholder="At least 8 characters"><button class="auth-show" onclick="toggleContractorPassword('contractorSignupPassword',this)">Show</button></div><label class="auth-label">Confirm Password</label><input id="contractorSignupConfirm" class="auth-input" type="password" placeholder="Re-enter your password"><button class="auth-primary" onclick="createContractorAccount()">Create Contractor Account</button><div id="contractorSignupError" class="auth-message auth-error"></div><div id="contractorSignupSuccess" class="auth-message auth-success"></div></div><div class="auth-note">Demo mode: any non-empty email and password will be accepted. You can switch to real authentication later.<br>Prototype login state is stored locally in this browser.</div>
 <button type="button" onclick="openCustomerOnlyMode()" style="width:100%;margin-top:18px;border:1px solid #d5dee8;border-radius:12px;background:#f8fafc;color:#0b2545;padding:13px;font-weight:850;cursor:pointer;">
-  Have a problem that needs fixing? Click here
+Have a problem that needs fixing? Click here
 </button>
-
-    <div class="auth-footer">TradeMatch Contractor Portal</div></div></div>
-
+<div class="auth-footer">TradeMatch Contractor Portal</div></div></div>
 
 <header class="topbar">
-  <div class="logo">
-    <div class="logo-mark">⌂</div>
-    <div>Trade<span style="color:#3180ff">Match</span><small>Local Pros. Real Solutions.</small></div>
-  </div>
-  <div class="portal-switch">
-    <button id="customerBtn" class="active" onclick="switchView('customer')">👤 &nbsp; Customer</button>
-    <button id="contractorBtn" onclick="switchView('contractor')">♧ &nbsp; Contractor</button>
-  </div>
-  <div class="location">⌖ Louisville, KY⌄</div>
-  
+<div class="logo">
+<div class="logo-mark">⌂</div>
+<div>Trade<span style="color:#3180ff">Match</span><small>Local Pros. Real Solutions.</small></div>
+</div>
+<div class="portal-switch">
+<button id="customerBtn" class="active" onclick="switchView('customer')">👤 &nbsp; Customer</button>
+<button id="contractorBtn" onclick="switchView('contractor')">♧ &nbsp; Contractor</button>
+</div>
+<div class="location">⌖ Louisville, KY⌄</div>
 
 <div class="profile-menu" id="profileMenu">
-    <button class="profile-trigger" onclick="toggleProfileMenu(event)" aria-label="Open profile menu">
-      <img class="avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80" alt="Jake Miller profile picture">
-      <span class="profile-chevron">▼</span>
-    </button>
-    <div class="profile-dropdown" id="profileDropdown">
-      <div class="profile-dropdown-head">
-        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80" alt="Jake Miller profile picture">
-        <div><strong>Jake Miller</strong><span>Licensed Electrician</span></div>
-      </div>
-      <button onclick="showContractorPage('messages'); closeProfileMenu();">✉ &nbsp; Messages <span style="float:right;background:#e5484d;color:#fff;border-radius:10px;padding:2px 7px;font-size:11px;">3</span></button>
-      <button onclick="openPersonalization(); closeProfileMenu();">⚙ &nbsp; Personalize Page <span style="float:right;color:#64748b;font-size:9px;font-weight:800;">CONTRACTOR</span></button>
-      <button onclick="changeContractorPicture(); closeProfileMenu();">📷 &nbsp; Change Profile Picture</button>
-      <button onclick="showContractorPage('profile'); closeProfileMenu();">👤 &nbsp; View Profile</button>
-      <button class="signout" onclick="contractorPortalLogout(); closeProfileMenu();">↪ &nbsp; Sign Out</button>
-    </div>
-  </div>
-</header>
-
-<section id="customerView" class="view active customer">
-  <div class="hero">
-    <div class="eyebrow">Get the right pro for the job.</div>
-    <h1>Your Home. <span>Our Local Pros.</span></h1>
-    <p>Tell us what you need. <b>TradeMatch</b> finds available local contractors, lets you compare quotes, and helps you book the job.</p>
-    <div class="request">
-      <input id="need" placeholder="What do you need help with?">
-      <select id="trade"><option>Choose a trade</option><option>Plumbing</option><option>Electrical</option><option>HVAC</option><option>Handyman</option><option>Roofing</option><option>Painting</option></select>
-      <button class="primary" onclick="findPros()">Find available pros →</button>
-    </div>
-    <div class="how">
-      <h3>How TradeMatch Works</h3>
-      <div class="steps">
-        <div class="step"><div class="num">1</div><b>Tell us your needs</b><p>Share a few details about your project.</p></div>
-        <div class="step"><div class="num">2</div><b>Compare pros</b><p>Review local contractors, ratings and quotes.</p></div>
-        <div class="step"><div class="num">3</div><b>Book & get it done</b><p>Choose your pro and schedule the job.</p></div>
-      </div>
-    </div>
-  </div>
-
-
-  <div id="matchingResults" class="section" style="display:none;padding-top:28px;">
-    <div class="section-title">
-      <div><h2 id="resultsTitle">Available Pros</h2>
-      <div id="resultsSubtitle" style="color:#66758b;font-size:12px;margin-top:4px;"></div></div>
-      <a href="#" onclick="clearResults();return false;">Clear results ×</a>
-    </div>
-    <div id="resultsGrid" class="pros"></div>
-  </div>
-
-  <div class="section">
-    <div class="section-title"><h2>Popular Services</h2><a href="#" onclick="return false">View all services →</a></div>
-    <div class="services">
-      <button class="service" onclick="quick('Plumbing')"><div class="icon">💧</div><strong>Plumbing</strong></button>
-      <button class="service" onclick="quick('Electrical')"><div class="icon">⚡</div><strong>Electrical</strong></button>
-      <button class="service" onclick="quick('HVAC')"><div class="icon">❄️</div><strong>HVAC</strong></button>
-      <button class="service" onclick="quick('Handyman')"><div class="icon">🔧</div><strong>Handyman</strong></button>
-      <button class="service" onclick="quick('Roofing')"><div class="icon">🏠</div><strong>Roofing</strong></button>
-      <button class="service" onclick="quick('Painting')"><div class="icon">🎨</div><strong>Painting</strong></button>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title"><h2>Featured Local Professionals</h2><a href="#" onclick="return false">View all pros →</a></div>
-    <div class="pros">
-      <button class="pro featured-pro" onclick="bookPro("Mike's Plumbing")"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"><div><b>Mike's Plumbing ✓</b><div class="rating">★ 4.8 (218)</div><span class="tag">Plumbing</span><small>Click to view full profile →</small></div></button>
-      <button class="pro featured-pro" onclick="bookPro('Bright Electric')"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"><div><b>Bright Electric ✓</b><div class="rating">★ 4.9 (342)</div><span class="tag">Electrical</span><small>Click to view full profile →</small></div></button>
-      <button class="pro featured-pro" onclick="bookPro('Summit HVAC')"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"><div><b>Summit HVAC ✓</b><div class="rating">★ 4.7 (186)</div><span class="tag">HVAC</span><small>Click to view full profile →</small></div></button>
-    </div>
-  </div>
-</section>
-
-<section id="contractorView" class="view contractor">
-  <aside class="sidebar">
-    <div class="side-logo">⌂ Trade<span style="color:#4d8fff">Match</span></div>
-    <div class="nav">
-      <button class="active" onclick="showContractorPage('dashboard')">▣ &nbsp; Job Feed</button>
-      <button onclick="showContractorPage('schedule')">▦ &nbsp; My Schedule</button>
-      <button onclick="showContractorPage('messages')">▢ &nbsp; Messages <span style="float:right;background:#ef4444;border-radius:10px;padding:1px 5px;font-size:9px">3</span></button>
-      <button onclick="showContractorPage('earnings')">$ &nbsp; Earnings</button>
-      <button onclick="showContractorPage('profile')">♙ &nbsp; Profile</button>
-    </div>
-    <div class="side-profile"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80"><div><b>Jake Miller</b><br><span style="color:#9db0c9">Licensed Electrician</span></div></div>
-  </aside>
-  <main class="dash">
-    <div class="dash-head"><div><h1>Good morning, Jake!</h1><div class="sub">Here are the latest jobs in your area.</div></div><button class="avail" onclick="showToast('Availability updated')">● Available⌄</button></div>
-    <div class="metrics">
-      <div class="metric"><div class="metric-label">Available Jobs</div><div class="metric-value">12</div><div class="delta">+3 since yesterday</div></div>
-      <div class="metric"><div class="metric-label">Avg. Rating</div><div class="metric-value">4.8</div><div class="delta" style="color:#f0a800">★★★★★ <span style="color:#8a99ac">(186 reviews)</span></div></div>
-      <div class="metric"><div class="metric-label">Today's Earnings</div><div class="metric-value">$420</div><div class="delta">+12% vs. last week</div></div>
-      <div class="metric"><div class="metric-label">This Week's Bookings</div><div class="metric-value">4</div><div class="delta">+2 vs. last week</div></div>
-    </div>
-    <div class="dashboard-grid">
-      <div class="panel">
-        <div class="panel-head"><span>Job Feed</span><span style="font-size:11px;color:#1769e8">All Trades⌄</span></div>
-        <div class="job"><div><b>Kitchen Outlet Repair</b><small>⌖ Louisville, KY · 3.2 mi<br>Kitchen outlet not working. Need a licensed electrician.</small></div><div class="price">$120 – $180<br><small>Est. 1–2 hrs</small></div><button class="quote" onclick="openJobDetails(0)">View & Quote</button></div>
-        <div class="job"><div><b>AC Not Cooling</b><small>⌖ Louisville, KY · 4.7 mi<br>AC unit not cooling properly. Looking for ASAP service.</small></div><div class="price">$200 – $350<br><small>Est. 2–4 hrs</small></div><button class="quote" onclick="openJobDetails(1)">View & Quote</button></div>
-        <div class="job"><div><b>Water Heater Installation</b><small>⌖ Louisville, KY · 6.1 mi<br>Need a 50 gallon water heater installed.</small></div><div class="price">$450 – $750<br><small>Est. 3–5 hrs</small></div><button class="quote" onclick="openJobDetails(2)">View & Quote</button></div>
-      </div>
-      <div class="right-stack">
-        <div class="panel nearby-card">
-  <div class="panel-head">
-    <span>Nearby Activity</span>
-    <button onclick="showNearbyActivity()" style="border:0;background:none;color:#1769e8;font-size:11px;font-weight:800;cursor:pointer;padding:0">View map →</button>
-  </div>
-  <div class="map-preview">
-    <div class="preview-label">📍 Middletown, KY</div>
-    <div class="preview-city">Louisville</div>
-    <div class="preview-job p1">P</div>
-    <div class="preview-job p2">E</div>
-    <div class="preview-job p3">H</div>
-    <div class="preview-job p4">R</div>
-  </div>
-  <div style="padding-top:10px;font-size:12px;color:#718096">8 active jobs across the Louisville area</div>
+<button class="profile-trigger" onclick="toggleProfileMenu(event)" aria-label="Open profile menu">
+<img class="avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80" alt="Jake Miller profile picture">
+<span class="profile-chevron">▼</span>
+</button>
+<div class="profile-dropdown" id="profileDropdown">
+<div class="profile-dropdown-head">
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80" alt="Jake Miller profile picture">
+<div><strong>Jake Miller</strong><span>Licensed Electrician</span></div>
 </div>
-        <div class="panel"><div class="panel-head">Quick Actions</div><div class="quick"><button onclick="showContractorPage('schedule')">▣ &nbsp; Update Availability</button><button onclick="showContractorPage('messages')">▢ &nbsp; View Messages</button><button onclick="showContractorPage('earnings')">$ &nbsp; Check Earnings</button><button onclick="showContractorPage('profile')">♙ &nbsp; Edit Profile</button></div></div>
-      </div>
-    </div>
-  </main>
+<button onclick="showContractorPage('messages'); closeProfileMenu();">✉ &nbsp; Messages <span style="float:right;background:#e5484d;color:#fff;border-radius:10px;padding:2px 7px;font-size:11px;">3</span></button>
+<button onclick="openPersonalization(); closeProfileMenu();">⚙ &nbsp; Personalize Page <span style="float:right;color:#64748b;font-size:9px;font-weight:800;">CONTRACTOR</span></button>
+<button onclick="changeContractorPicture(); closeProfileMenu();">📷 &nbsp; Change Profile Picture</button>
+<button onclick="showContractorPage('profile'); closeProfileMenu();">👤 &nbsp; View Profile</button>
+<button class="signout" onclick="contractorPortalLogout(); closeProfileMenu();">↪ &nbsp; Sign Out</button>
+</div>
+</div>
+</header>
+<section id="customerView" class="view active customer">
+<div class="hero">
+<div class="eyebrow">Get the right pro for the job.</div>
+<h1>Your Home. <span>Our Local Pros.</span></h1>
+<p>Tell us what you need. <b>TradeMatch</b> finds available local contractors, lets you compare quotes, and helps you book the job.</p>
+<div class="request">
+<input id="need" placeholder="What do you need help with?">
+<select id="trade"><option>Choose a trade</option><option>Plumbing</option><option>Electrical</option><option>HVAC</option><option>Handyman</option><option>Roofing</option><option>Painting</option></select>
+<button class="primary" onclick="findPros()">Find available pros →</button>
+</div>
+<div class="how">
+<h3>How TradeMatch Works</h3>
+<div class="steps">
+<div class="step"><div class="num">1</div><b>Tell us your needs</b><p>Share a few details about your project.</p></div>
+<div class="step"><div class="num">2</div><b>Compare pros</b><p>Review local contractors, ratings and quotes.</p></div>
+<div class="step"><div class="num">3</div><b>Book & get it done</b><p>Choose your pro and schedule the job.</p></div>
+</div>
+</div>
+</div>
+
+<div id="matchingResults" class="section" style="display:none;padding-top:28px;">
+<div class="section-title">
+<div><h2 id="resultsTitle">Available Pros</h2>
+<div id="resultsSubtitle" style="color:#66758b;font-size:12px;margin-top:4px;"></div></div>
+<a href="#" onclick="clearResults();return false;">Clear results ×</a>
+</div>
+<div id="resultsGrid" class="pros"></div>
+</div>
+<div class="section">
+<div class="section-title"><h2>Popular Services</h2><a href="#" onclick="return false">View all services →</a></div>
+<div class="services">
+<button class="service" onclick="quick('Plumbing')"><div class="icon">💧</div><strong>Plumbing</strong></button>
+<button class="service" onclick="quick('Electrical')"><div class="icon">⚡</div><strong>Electrical</strong></button>
+<button class="service" onclick="quick('HVAC')"><div class="icon">❄️</div><strong>HVAC</strong></button>
+<button class="service" onclick="quick('Handyman')"><div class="icon">🔧</div><strong>Handyman</strong></button>
+<button class="service" onclick="quick('Roofing')"><div class="icon">🏠</div><strong>Roofing</strong></button>
+<button class="service" onclick="quick('Painting')"><div class="icon">🎨</div><strong>Painting</strong></button>
+</div>
+</div>
+<div class="section">
+<div class="section-title"><h2>Featured Local Professionals</h2><a href="#" onclick="return false">View all pros →</a></div>
+<div class="pros">
+<button class="pro featured-pro" onclick="bookPro("Mike's Plumbing")"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"><div><b>Mike's Plumbing ✓</b><div class="rating">★ 4.8 (218)</div><span class="tag">Plumbing</span><small>Click to view full profile →</small></div></button>
+<button class="pro featured-pro" onclick="bookPro('Bright Electric')"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"><div><b>Bright Electric ✓</b><div class="rating">★ 4.9 (342)</div><span class="tag">Electrical</span><small>Click to view full profile →</small></div></button>
+<button class="pro featured-pro" onclick="bookPro('Summit HVAC')"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"><div><b>Summit HVAC ✓</b><div class="rating">★ 4.7 (186)</div><span class="tag">HVAC</span><small>Click to view full profile →</small></div></button>
+</div>
+</div>
 </section>
-
-
-
+<section id="contractorView" class="view contractor">
+<aside class="sidebar">
+<div class="side-logo">⌂ Trade<span style="color:#4d8fff">Match</span></div>
+<div class="nav">
+<button class="active" onclick="showContractorPage('dashboard')">▣ &nbsp; Job Feed</button>
+<button onclick="showContractorPage('schedule')">▦ &nbsp; My Schedule</button>
+<button onclick="showContractorPage('messages')">▢ &nbsp; Messages <span style="float:right;background:#ef4444;border-radius:10px;padding:1px 5px;font-size:9px">3</span></button>
+<button onclick="showContractorPage('earnings')">$ &nbsp; Earnings</button>
+<button onclick="showContractorPage('profile')">♙ &nbsp; Profile</button>
+</div>
+<div class="side-profile"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80"><div><b>Jake Miller</b><br><span style="color:#9db0c9">Licensed Electrician</span></div></div>
+</aside>
+<main class="dash">
+<div class="dash-head"><div><h1>Good morning, Jake!</h1><div class="sub">Here are the latest jobs in your area.</div></div><button class="avail" onclick="showToast('Availability updated')">● Available⌄</button></div>
+<div class="metrics">
+<div class="metric"><div class="metric-label">Available Jobs</div><div class="metric-value">12</div><div class="delta">+3 since yesterday</div></div>
+<div class="metric"><div class="metric-label">Avg. Rating</div><div class="metric-value">4.8</div><div class="delta" style="color:#f0a800">★★★★★ <span style="color:#8a99ac">(186 reviews)</span></div></div>
+<div class="metric"><div class="metric-label">Today's Earnings</div><div class="metric-value">$420</div><div class="delta">+12% vs. last week</div></div>
+<div class="metric"><div class="metric-label">This Week's Bookings</div><div class="metric-value">4</div><div class="delta">+2 vs. last week</div></div>
+</div>
+<div class="dashboard-grid">
+<div class="panel">
+<div class="panel-head"><span>Job Feed</span><span style="font-size:11px;color:#1769e8">All Trades⌄</span></div>
+<div class="job"><div><b>Kitchen Outlet Repair</b><small>⌖ Louisville, KY · 3.2 mi<br>Kitchen outlet not working. Need a licensed electrician.</small></div><div class="price">$120 – $180<br><small>Est. 1–2 hrs</small></div><button class="quote" onclick="openJobDetails(0)">View & Quote</button></div>
+<div class="job"><div><b>AC Not Cooling</b><small>⌖ Louisville, KY · 4.7 mi<br>AC unit not cooling properly. Looking for ASAP service.</small></div><div class="price">$200 – $350<br><small>Est. 2–4 hrs</small></div><button class="quote" onclick="openJobDetails(1)">View & Quote</button></div>
+<div class="job"><div><b>Water Heater Installation</b><small>⌖ Louisville, KY · 6.1 mi<br>Need a 50 gallon water heater installed.</small></div><div class="price">$450 – $750<br><small>Est. 3–5 hrs</small></div><button class="quote" onclick="openJobDetails(2)">View & Quote</button></div>
+</div>
+<div class="right-stack">
+<div class="panel nearby-card">
+<div class="panel-head">
+<span>Nearby Activity</span>
+<button onclick="showNearbyActivity()" style="border:0;background:none;color:#1769e8;font-size:11px;font-weight:800;cursor:pointer;padding:0">View map →</button>
+</div>
+<div class="map-preview">
+<div class="preview-label">📍 Middletown, KY</div>
+<div class="preview-city">Louisville</div>
+<div class="preview-job p1">P</div>
+<div class="preview-job p2">E</div>
+<div class="preview-job p3">H</div>
+<div class="preview-job p4">R</div>
+</div>
+<div style="padding-top:10px;font-size:12px;color:#718096">8 active jobs across the Louisville area</div>
+</div>
+<div class="panel"><div class="panel-head">Quick Actions</div><div class="quick"><button onclick="showContractorPage('schedule')">▣ &nbsp; Update Availability</button><button onclick="showContractorPage('messages')">▢ &nbsp; View Messages</button><button onclick="showContractorPage('earnings')">$ &nbsp; Check Earnings</button><button onclick="showContractorPage('profile')">♙ &nbsp; Edit Profile</button></div></div>
+</div>
+</div>
+</main>
+</section>
 
 <div id="nearbyMapModal" class="modal" style="display:none;">
-  <div class="modal-card nearby-map-card">
-    <button class="modal-close" onclick="closeNearbyActivity()">×</button>
-
-    <div class="nearby-map-head">
-      <div>
-        <div class="eyebrow">Nearby Activity</div>
-        <h2>Louisville Job Map</h2>
-        <p>Browse TradeMatch jobs across Louisville, with the activity centered around Middletown.</p>
-      </div>
-      <div class="map-actions">
-        <a href="https://www.google.com/maps/search/?api=1&query=Louisville%2C%20KY"
-           target="_blank" rel="noopener" class="map-link">Google Maps ↗</a>
-        <a href="http://maps.apple.com/?q=Louisville%2C%20KY"
-           target="_blank" rel="noopener" class="map-link">Apple Maps ↗</a>
-      </div>
-    </div>
-
-    <div class="map-layout">
-      <div id="tradeMap"></div>
-
-      <aside class="map-jobs">
-        <div class="map-jobs-title">
-          <strong>Nearby jobs</strong>
-          <span id="mapJobCount">8 active</span>
-        </div>
-
-        <button class="map-job" onclick="focusTradeJob(0)">
-          <span class="job-pin plumbing">P</span>
-          <span><strong>Leaking kitchen sink</strong><small>Middletown · Plumbing</small></span>
-          <b>2.1 mi</b>
-        </button>
-        <button class="map-job" onclick="focusTradeJob(1)">
-          <span class="job-pin electrical">E</span>
-          <span><strong>Electrical outlet repair</strong><small>Jeffersontown · Electrical</small></span>
-          <b>5.4 mi</b>
-        </button>
-        <button class="map-job" onclick="focusTradeJob(2)">
-          <span class="job-pin hvac">H</span>
-          <span><strong>AC not cooling</strong><small>Hurstbourne · HVAC</small></span>
-          <b>6.2 mi</b>
-        </button>
-        <button class="map-job" onclick="focusTradeJob(3)">
-          <span class="job-pin handyman">H</span>
-          <span><strong>Drywall patch</strong><small>St. Matthews · Handyman</small></span>
-          <b>10.8 mi</b>
-        </button>
-        <button class="map-job" onclick="focusTradeJob(4)">
-          <span class="job-pin roofing">R</span>
-          <span><strong>Roof inspection</strong><small>Anchorage · Roofing</small></span>
-          <b>7.1 mi</b>
-        </button>
-        <button class="map-job" onclick="focusTradeJob(5)">
-          <span class="job-pin painting">P</span>
-          <span><strong>Interior painting</strong><small>Old Louisville · Painting</small></span>
-          <b>14.2 mi</b>
-        </button>
-        <button class="map-job" onclick="focusTradeJob(6)">
-          <span class="job-pin plumbing">P</span>
-          <span><strong>Water heater service</strong><small>Fern Creek · Plumbing</small></span>
-          <b>8.9 mi</b>
-        </button>
-        <button class="map-job" onclick="focusTradeJob(7)">
-          <span class="job-pin handyman">H</span>
-          <span><strong>Fence repair</strong><small>Eastwood · Handyman</small></span>
-          <b>9.6 mi</b>
-        </button>
-      </aside>
-    </div>
-
-    <div class="map-footer">
-      <span><i class="legend-dot"></i> TradeMatch job locations are demo listings.</span>
-      <button onclick="closeNearbyActivity()">Close map</button>
-    </div>
-  </div>
+<div class="modal-card nearby-map-card">
+<button class="modal-close" onclick="closeNearbyActivity()">×</button>
+<div class="nearby-map-head">
+<div>
+<div class="eyebrow">Nearby Activity</div>
+<h2>Louisville Job Map</h2>
+<p>Browse TradeMatch jobs across Louisville, with the activity centered around Middletown.</p>
 </div>
-
+<div class="map-actions">
+<a href="https://www.google.com/maps/search/?api=1&query=Louisville%2C%20KY"
+target="_blank" rel="noopener" class="map-link">Google Maps ↗</a>
+<a href="http://maps.apple.com/?q=Louisville%2C%20KY"
+target="_blank" rel="noopener" class="map-link">Apple Maps ↗</a>
+</div>
+</div>
+<div class="map-layout">
+<div id="tradeMap"></div>
+<aside class="map-jobs">
+<div class="map-jobs-title">
+<strong>Nearby jobs</strong>
+<span id="mapJobCount">8 active</span>
+</div>
+<button class="map-job" onclick="focusTradeJob(0)">
+<span class="job-pin plumbing">P</span>
+<span><strong>Leaking kitchen sink</strong><small>Middletown · Plumbing</small></span>
+<b>2.1 mi</b>
+</button>
+<button class="map-job" onclick="focusTradeJob(1)">
+<span class="job-pin electrical">E</span>
+<span><strong>Electrical outlet repair</strong><small>Jeffersontown · Electrical</small></span>
+<b>5.4 mi</b>
+</button>
+<button class="map-job" onclick="focusTradeJob(2)">
+<span class="job-pin hvac">H</span>
+<span><strong>AC not cooling</strong><small>Hurstbourne · HVAC</small></span>
+<b>6.2 mi</b>
+</button>
+<button class="map-job" onclick="focusTradeJob(3)">
+<span class="job-pin handyman">H</span>
+<span><strong>Drywall patch</strong><small>St. Matthews · Handyman</small></span>
+<b>10.8 mi</b>
+</button>
+<button class="map-job" onclick="focusTradeJob(4)">
+<span class="job-pin roofing">R</span>
+<span><strong>Roof inspection</strong><small>Anchorage · Roofing</small></span>
+<b>7.1 mi</b>
+</button>
+<button class="map-job" onclick="focusTradeJob(5)">
+<span class="job-pin painting">P</span>
+<span><strong>Interior painting</strong><small>Old Louisville · Painting</small></span>
+<b>14.2 mi</b>
+</button>
+<button class="map-job" onclick="focusTradeJob(6)">
+<span class="job-pin plumbing">P</span>
+<span><strong>Water heater service</strong><small>Fern Creek · Plumbing</small></span>
+<b>8.9 mi</b>
+</button>
+<button class="map-job" onclick="focusTradeJob(7)">
+<span class="job-pin handyman">H</span>
+<span><strong>Fence repair</strong><small>Eastwood · Handyman</small></span>
+<b>9.6 mi</b>
+</button>
+</aside>
+</div>
+<div class="map-footer">
+<span><i class="legend-dot"></i> TradeMatch job locations are demo listings.</span>
+<button onclick="closeNearbyActivity()">Close map</button>
+</div>
+</div>
+</div>
 
 <div id="jobDetailsModal" class="job-details-overlay" style="display:none;">
-  <div class="job-details-card">
-    <button class="job-details-close" onclick="closeJobDetails()">×</button>
-    <div class="job-details-gallery">
-      <img id="jobImage1" src="" alt="Job site photo">
-      <img id="jobImage2" src="" alt="Job site photo">
-      <img id="jobImage3" src="" alt="Job site photo">
-    </div>
-    <div class="job-details-content">
-      <div class="eyebrow">JOB REQUEST</div>
-      <h2 id="jobDetailTitle"></h2>
-      <div class="job-detail-meta" id="jobDetailMeta"></div>
-      <div class="job-description-box">
-        <h3>What needs to be done</h3>
-        <p id="jobDetailDescription"></p>
-      </div>
-      <div class="quote-box">
-        <div>
-          <h3>Your price</h3>
-          <p>Enter the total price you would charge the customer for this job.</p>
-        </div>
-        <div class="price-entry"><span>$</span><input id="contractorPrice" type="number" min="0" step="25" placeholder="0"></div>
-      </div>
-      <div class="suggested-prices" id="suggestedPrices"></div>
-      <button class="submit-quote" onclick="submitContractorQuote()">Submit Quote</button>
-    </div>
-  </div>
+<div class="job-details-card">
+<button class="job-details-close" onclick="closeJobDetails()">×</button>
+<div class="job-details-gallery">
+<img id="jobImage1" src="" alt="Job site photo">
+<img id="jobImage2" src="" alt="Job site photo">
+<img id="jobImage3" src="" alt="Job site photo">
 </div>
-
+<div class="job-details-content">
+<div class="eyebrow">JOB REQUEST</div>
+<h2 id="jobDetailTitle"></h2>
+<div class="job-detail-meta" id="jobDetailMeta"></div>
+<div class="job-description-box">
+<h3>What needs to be done</h3>
+<p id="jobDetailDescription"></p>
+</div>
+<div class="quote-box">
+<div>
+<h3>Your price</h3>
+<p>Enter the total price you would charge the customer for this job.</p>
+</div>
+<div class="price-entry"><span>$</span><input id="contractorPrice" type="number" min="0" step="25" placeholder="0"></div>
+</div>
+<div class="suggested-prices" id="suggestedPrices"></div>
+<button class="submit-quote" onclick="submitContractorQuote()">Submit Quote</button>
+</div>
+</div>
+</div>
 <div id="nearbyActivityPanel" class="nearby-inline-panel" style="display:none;position:relative;z-index:5;">
-  <div class="nearby-inline-head">
-    <div>
-      <div class="eyebrow">Nearby Activity</div>
-      <h2>Louisville Service Jobs</h2>
-      <p>Active TradeMatch requests across Louisville, centered around Middletown.</p>
-    </div>
-    <button class="inline-close" onclick="hideNearbyActivity()">Back to dashboard</button>
-  </div>
-
-  <div class="nearby-inline-grid">
-    <div class="nearby-inline-map">
-      <iframe
-        title="Louisville and Middletown map"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=-85.83%2C38.08%2C-85.38%2C38.34&layer=mapnik&marker=38.2453%2C-85.5396"
-        loading="lazy">
-      </iframe>
-      <div class="map-overlay-label">📍 Middletown</div>
-    </div>
-
-    <div class="nearby-inline-list">
-      <div class="nearby-list-head">
-        <strong>Nearby job listings</strong>
-        <span>8 active</span>
-      </div>
-
-      <button class="inline-job"><span class="mini-pin plumbing">P</span><span><b>Leaking kitchen sink</b><small>Middletown · Plumbing</small></span><em>2.1 mi</em></button>
-      <button class="inline-job"><span class="mini-pin electrical">E</span><span><b>Electrical outlet repair</b><small>Jeffersontown · Electrical</small></span><em>5.4 mi</em></button>
-      <button class="inline-job"><span class="mini-pin hvac">H</span><span><b>AC not cooling</b><small>Hurstbourne · HVAC</small></span><em>6.2 mi</em></button>
-      <button class="inline-job"><span class="mini-pin handyman">H</span><span><b>Drywall patch</b><small>St. Matthews · Handyman</small></span><em>10.8 mi</em></button>
-      <button class="inline-job"><span class="mini-pin roofing">R</span><span><b>Roof inspection</b><small>Anchorage · Roofing</small></span><em>7.1 mi</em></button>
-      <button class="inline-job"><span class="mini-pin painting">P</span><span><b>Interior painting</b><small>Old Louisville · Painting</small></span><em>14.2 mi</em></button>
-      <button class="inline-job"><span class="mini-pin plumbing">P</span><span><b>Water heater service</b><small>Fern Creek · Plumbing</small></span><em>8.9 mi</em></button>
-      <button class="inline-job"><span class="mini-pin handyman">H</span><span><b>Fence repair</b><small>Eastwood · Handyman</small></span><em>9.6 mi</em></button>
-    </div>
-  </div>
-
-  <div class="nearby-inline-footer">
-    <a href="https://www.google.com/maps/search/?api=1&query=Louisville%2C%20KY" target="_blank" rel="noopener">Open full Louisville map in Google Maps ↗</a>
-    <a href="http://maps.apple.com/?q=Louisville%2C%20KY" target="_blank" rel="noopener">Open in Apple Maps ↗</a>
-  </div>
+<div class="nearby-inline-head">
+<div>
+<div class="eyebrow">Nearby Activity</div>
+<h2>Louisville Service Jobs</h2>
+<p>Active TradeMatch requests across Louisville, centered around Middletown.</p>
 </div>
-
+<button class="inline-close" onclick="hideNearbyActivity()">Back to dashboard</button>
+</div>
+<div class="nearby-inline-grid">
+<div class="nearby-inline-map">
+<iframe
+title="Louisville and Middletown map"
+src="https://www.openstreetmap.org/export/embed.html?bbox=-85.83%2C38.08%2C-85.38%2C38.34&layer=mapnik&marker=38.2453%2C-85.5396"
+loading="lazy">
+</iframe>
+<div class="map-overlay-label">📍 Middletown</div>
+</div>
+<div class="nearby-inline-list">
+<div class="nearby-list-head">
+<strong>Nearby job listings</strong>
+<span>8 active</span>
+</div>
+<button class="inline-job"><span class="mini-pin plumbing">P</span><span><b>Leaking kitchen sink</b><small>Middletown · Plumbing</small></span><em>2.1 mi</em></button>
+<button class="inline-job"><span class="mini-pin electrical">E</span><span><b>Electrical outlet repair</b><small>Jeffersontown · Electrical</small></span><em>5.4 mi</em></button>
+<button class="inline-job"><span class="mini-pin hvac">H</span><span><b>AC not cooling</b><small>Hurstbourne · HVAC</small></span><em>6.2 mi</em></button>
+<button class="inline-job"><span class="mini-pin handyman">H</span><span><b>Drywall patch</b><small>St. Matthews · Handyman</small></span><em>10.8 mi</em></button>
+<button class="inline-job"><span class="mini-pin roofing">R</span><span><b>Roof inspection</b><small>Anchorage · Roofing</small></span><em>7.1 mi</em></button>
+<button class="inline-job"><span class="mini-pin painting">P</span><span><b>Interior painting</b><small>Old Louisville · Painting</small></span><em>14.2 mi</em></button>
+<button class="inline-job"><span class="mini-pin plumbing">P</span><span><b>Water heater service</b><small>Fern Creek · Plumbing</small></span><em>8.9 mi</em></button>
+<button class="inline-job"><span class="mini-pin handyman">H</span><span><b>Fence repair</b><small>Eastwood · Handyman</small></span><em>9.6 mi</em></button>
+</div>
+</div>
+<div class="nearby-inline-footer">
+<a href="https://www.google.com/maps/search/?api=1&query=Louisville%2C%20KY" target="_blank" rel="noopener">Open full Louisville map in Google Maps ↗</a>
+<a href="http://maps.apple.com/?q=Louisville%2C%20KY" target="_blank" rel="noopener">Open in Apple Maps ↗</a>
+</div>
+</div>
 <div id="contractorPages" style="display:none;min-height:calc(100vh - 74px);background:#f6f8fc;">
 <main class="dash" style="max-width:1250px;margin:0 auto;">
 <button class="back-dashboard" onclick="showContractorPage('dashboard')">← Back to Dashboard</button>
 <h1 id="contractorPageTitle" style="font-family:'Space Grotesk';margin:14px 0 4px;">My Schedule</h1>
 <div id="contractorPageSubtitle" class="sub"></div>
-
 <div id="pageSchedule" class="contractor-page">
 <div class="panel" style="padding:22px;margin-top:20px">
 <div class="panel-head" style="padding:0 0 15px">My Schedule <span style="color:#1769e8;font-size:11px">This Week</span></div>
@@ -571,7 +527,6 @@ body.contractor-only-mode #contractorAuthScreen {
 <div class="schedule-item"><b>2:00 PM — Electrical Panel Inspection<small>Louisville, KY · 5.1 mi</small></b><span class="status-pending">Pending</span></div>
 <div style="margin-top:18px"><button class="avail" onclick="showToast('Availability saved')">● Available for jobs</button></div>
 </div></div>
-
 <div id="pageMessages" class="contractor-page">
 <div class="panel" style="margin-top:20px">
 <div class="panel-head">Messages <span style="color:#1769e8;font-size:11px">3 unread</span></div>
@@ -579,7 +534,6 @@ body.contractor-only-mode #contractorAuthScreen {
 <div class="message-row" onclick="showToast('Opening Mark Davis conversation')"><div class="message-avatar">MD</div><div><b>Mark Davis</b><small>AC service — “Thanks for the quick quote.”</small></div><strong>1</strong></div>
 <div class="message-row" onclick="showToast('Opening Emily Carter conversation')"><div class="message-avatar">EC</div><div><b>Emily Carter</b><small>Water heater — “Can we move the appointment to Friday?”</small></div><strong>1</strong></div>
 </div></div>
-
 <div id="pageEarnings" class="contractor-page">
 <div class="metrics" style="margin-top:20px">
 <div class="metric"><div class="metric-label">This Week</div><div class="metric-value">$1,840</div><div class="delta">+12% vs. last week</div></div>
@@ -590,841 +544,1102 @@ body.contractor-only-mode #contractorAuthScreen {
 <div class="panel" style="padding:20px"><div class="panel-head" style="padding:0 0 12px">Recent Payments</div>
 <div class="payment-row"><span>Kitchen Outlet Repair</span><b>$165</b></div><div class="payment-row"><span>Ceiling Fan Installation</span><b>$220</b></div><div class="payment-row"><span>Panel Inspection</span><b>$310</b></div></div>
 </div>
-
 <div id="pageProfile" class="contractor-page">
 <div class="profile-edit-card" style="margin-top:20px">
-<div class="profile-edit-top"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"><div><h2>Jake Miller</h2><p>Licensed Electrician · Louisville, KY</p><span class="verified">✓ Verified TradeMatch Pro</span></div></div>
-<div class="edit-grid"><label>Business Name<input value="Jake Miller Electrical"></label><label>Trade<select><option>Electrical</option></select></label><label>Service Area<input value="Louisville, KY"></label><label>Hourly Rate<input value="$95 / hour"></label><label style="grid-column:1/-1">About<textarea>Licensed electrician serving Louisville homeowners with residential electrical repairs, installations, and troubleshooting.</textarea></label></div>
+<div class="profile-edit-top"><div class="profile-photo-edit"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" alt="Contractor profile picture"><button type="button" class="profile-photo-change" onclick="changeContractorPicture()" title="Choose or change profile picture">📷</button></div><div><h2>Jake Miller</h2><p>Licensed Electrician · Louisville, KY</p><span class="verified">✓ Verified TradeMatch Pro</span><div style="margin-top:9px"><button type="button" class="secondary profile-photo-text-button" onclick="changeContractorPicture()">Choose / Change Image</button></div></div></div>
+<div class="edit-grid"><label>Full Name<input id="contractorFullName" value="Jake Miller"></label><label>Business Name<input value="Jake Miller Electrical"></label><label>Trade<select><option>Electrical</option></select></label><label>Service Area<input value="Louisville, KY"></label><label>Hourly Rate<input value="$95 / hour"></label><label style="grid-column:1/-1">About<textarea>Licensed electrician serving Louisville homeowners with residential electrical repairs, installations, and troubleshooting.</textarea></label></div>
 <button class="primary save-profile" onclick="showToast('Profile changes saved')">Save Profile</button>
 </div></div>
 </main></div>
-
 <div id="profileModal" class="profile-modal" onclick="closeProfileOnBackdrop(event)">
-  <div class="profile-card">
-    <div class="profile-cover">
-      <button class="profile-close" onclick="closeProfile()">×</button>
-      <img id="profilePhoto" class="profile-avatar" src="" alt="Contractor">
-    </div>
-    <div class="profile-body">
-      <div class="profile-head">
-        <div>
-          <h2 id="profileName">Contractor</h2>
-          <div id="profileSpecialty" class="profile-sub"></div>
-          <span class="verified">✓ Verified TradeMatch Pro</span>
-          <div id="profileRating" class="profile-rating"></div>
-        </div>
-        <button id="bookMainButton" class="book-main" onclick="showBookingForm()">Book This Pro</button>
-      </div>
-
-      <div class="profile-sections">
-        <div>
-          <div class="profile-section">
-            <h3>About this pro</h3>
-            <p id="profileAbout"></p>
-          </div>
-          <div class="profile-section">
-            <h3>Services</h3>
-            <div id="profileServices" class="service-pills"></div>
-          </div>
-          <div class="profile-section">
-            <h3>Recent reviews</h3>
-            <div class="review"><b>★★★★★ &nbsp; Sarah T.</b><p>“Professional, on time, and did a great job. Would definitely hire again.”</p></div>
-            <div class="review"><b>★★★★★ &nbsp; Marcus R.</b><p>“Very easy to work with and explained everything before starting.”</p></div>
-          </div>
-        </div>
-        <div>
-          <div class="profile-section">
-            <h3>Professional details</h3>
-            <p class="company-line">Works for: <strong id="profileCompany">Local TradeMatch Pro</strong></p>
-            <p style="margin-top:9px">📍 Louisville, KY<br><br>⏱ Response time: Usually within 15 min<br><br>✓ Background verified<br><br>🛡 TradeMatch protected</p>
-          </div>
-          <div class="profile-section">
-            <h3>Reach out</h3>
-            <div class="contact-actions">
-              <button class="contact-action" onclick="contactPro('email')">✉ Email</button>
-              <button class="contact-action" onclick="contactPro('phone')">☎ Phone</button>
-              <button class="contact-action" onclick="contactPro('message')">💬 Message</button>
-              <button class="contact-action" onclick="showBookingForm()">📅 Book Services</button>
-            </div>
-          </div>
-          <div class="profile-section">
-            <h3>Availability</h3>
-            <p style="color:#128052;font-weight:700">● Available for new jobs</p>
-            <p>Today and this week</p>
-          </div>
-        </div>
-      </div>
-
-      <div id="messagePanel" class="booking-panel">
-        <h3>Message <span id="messageName"></span></h3>
-        <textarea id="messageText" placeholder="Write a message to this professional..."></textarea>
-        <button class="primary" onclick="sendProMessage()">Send Message</button>
-      </div>
-
-      <div id="bookingPanel" class="booking-panel">
-        <h3>Book <span id="bookingName"></span></h3>
-        <div class="booking-grid">
-          <input id="bookingDate" type="date">
-          <select id="bookingTime">
-            <option>Choose a time</option><option>8:00 AM</option><option>10:00 AM</option><option>12:00 PM</option><option>2:00 PM</option><option>4:00 PM</option><option>6:00 PM</option>
-          </select>
-          <textarea id="bookingDetails" placeholder="Tell the pro a little more about the job..."></textarea>
-          <button class="confirm-book" onclick="confirmBooking()">Request Booking</button>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="profile-card">
+<div class="profile-cover">
+<button class="profile-close" onclick="closeProfile()">×</button>
+<img id="profilePhoto" class="profile-avatar" src="" alt="Contractor">
 </div>
-
+<div class="profile-body">
+<div class="profile-head">
+<div>
+<h2 id="profileName">Contractor</h2>
+<div id="profileSpecialty" class="profile-sub"></div>
+<span class="verified">✓ Verified TradeMatch Pro</span>
+<div id="profileRating" class="profile-rating"></div>
+</div>
+<button id="bookMainButton" class="book-main" onclick="showBookingForm()">Book This Pro</button>
+</div>
+<div class="profile-sections">
+<div>
+<div class="profile-section">
+<h3>About this pro</h3>
+<p id="profileAbout"></p>
+</div>
+<div class="profile-section">
+<h3>Services</h3>
+<div id="profileServices" class="service-pills"></div>
+</div>
+<div class="profile-section">
+<h3>Recent reviews</h3>
+<div class="review"><b>★★★★★ &nbsp; Sarah T.</b><p>“Professional, on time, and did a great job. Would definitely hire again.”</p></div>
+<div class="review"><b>★★★★★ &nbsp; Marcus R.</b><p>“Very easy to work with and explained everything before starting.”</p></div>
+</div>
+</div>
+<div>
+<div class="profile-section">
+<h3>Professional details</h3>
+<p class="company-line">Works for: <strong id="profileCompany">Local TradeMatch Pro</strong></p>
+<p style="margin-top:9px">📍 Louisville, KY<br><br>⏱ Response time: Usually within 15 min<br><br>✓ Background verified<br><br>🛡 TradeMatch protected</p>
+</div>
+<div class="profile-section">
+<h3>Reach out</h3>
+<div class="contact-actions">
+<button class="contact-action" onclick="contactPro('email')">✉ Email</button>
+<button class="contact-action" onclick="contactPro('phone')">☎ Phone</button>
+<button class="contact-action" onclick="contactPro('message')">💬 Message</button>
+<button class="contact-action" onclick="showBookingForm()">📅 Book Services</button>
+</div>
+</div>
+<div class="profile-section">
+<h3>Availability</h3>
+<p style="color:#128052;font-weight:700">● Available for new jobs</p>
+<p>Today and this week</p>
+</div>
+</div>
+</div>
+<div id="messagePanel" class="booking-panel">
+<h3>Message <span id="messageName"></span></h3>
+<textarea id="messageText" placeholder="Write a message to this professional..."></textarea>
+<button class="primary" onclick="sendProMessage()">Send Message</button>
+</div>
+<div id="bookingPanel" class="booking-panel">
+<h3>Book <span id="bookingName"></span></h3>
+<div class="booking-grid">
+<input id="bookingDate" type="date">
+<select id="bookingTime">
+<option>Choose a time</option><option>8:00 AM</option><option>10:00 AM</option><option>12:00 PM</option><option>2:00 PM</option><option>4:00 PM</option><option>6:00 PM</option>
+</select>
+<textarea id="bookingDetails" placeholder="Tell the pro a little more about the job..."></textarea>
+<button class="confirm-book" onclick="confirmBooking()">Request Booking</button>
+</div>
+</div>
+</div>
+</div>
+</div>
 <script>
 function switchView(view){
-  document.getElementById('customerView').classList.toggle('active',view==='customer');
-  document.getElementById('contractorView').classList.toggle('active',view==='contractor');
-  document.getElementById('customerBtn').classList.toggle('active',view==='customer');
-  document.getElementById('contractorBtn').classList.toggle('active',view==='contractor');
-  window.scrollTo(0,0);
+document.getElementById('customerView').classList.toggle('active',view==='customer');
+document.getElementById('contractorView').classList.toggle('active',view==='contractor');
+document.getElementById('customerBtn').classList.toggle('active',view==='customer');
+document.getElementById('contractorBtn').classList.toggle('active',view==='contractor');
+window.scrollTo(0,0);
 }
 function showToast(msg){
-  let t=document.getElementById('toast');
-  if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;right:22px;bottom:22px;background:#0f1d33;color:#fff;padding:13px 17px;border-radius:10px;z-index:100;font-size:13px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,.18)';document.body.appendChild(t)}
-  t.textContent=msg;t.style.display='block';clearTimeout(window.tm);window.tm=setTimeout(()=>t.style.display='none',1800)
+let t=document.getElementById('toast');
+if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;right:22px;bottom:22px;background:#0f1d33;color:#fff;padding:13px 17px;border-radius:10px;z-index:100;font-size:13px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,.18)';document.body.appendChild(t)}
+t.textContent=msg;t.style.display='block';clearTimeout(window.tm);window.tm=setTimeout(()=>t.style.display='none',1800)
 }
 const tradePros = {
-  Plumbing: [
-    {name:"Mike's Plumbing",rating:"4.8",reviews:"218",distance:"2.1 mi",specialty:"Licensed Plumber",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
-    {name:"Blue River Plumbing",rating:"4.9",reviews:"164",distance:"3.4 mi",specialty:"Residential Plumbing",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
-    {name:"Louisville Pipe Pros",rating:"4.7",reviews:"129",distance:"5.2 mi",specialty:"Emergency Plumbing",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}],
-  Electrical: [
-    {name:"Bright Electric",rating:"4.9",reviews:"342",distance:"1.8 mi",specialty:"Licensed Electrician",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
-    {name:"Bluegrass Electrical",rating:"4.8",reviews:"201",distance:"3.7 mi",specialty:"Residential Electric",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
-    {name:"Derby City Electric",rating:"4.7",reviews:"177",distance:"6.0 mi",specialty:"Repairs & Installations",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}],
-  HVAC: [
-    {name:"Summit HVAC",rating:"4.7",reviews:"186",distance:"2.8 mi",specialty:"Heating & Cooling",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
-    {name:"AirCare Louisville",rating:"4.9",reviews:"245",distance:"4.1 mi",specialty:"AC & Furnace Service",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
-    {name:"Comfort Pros HVAC",rating:"4.8",reviews:"153",distance:"5.6 mi",specialty:"Residential HVAC",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}],
-  Handyman: [
-    {name:"Louisville Handyman Co.",rating:"4.8",reviews:"198",distance:"2.4 mi",specialty:"Home Repairs",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
-    {name:"FixRight Home Services",rating:"4.9",reviews:"142",distance:"3.9 mi",specialty:"General Handyman",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
-    {name:"Derby Home Repair",rating:"4.7",reviews:"116",distance:"5.3 mi",specialty:"Repairs & Assembly",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}],
-  Roofing: [
-    {name:"Bluegrass Roofing",rating:"4.9",reviews:"221",distance:"3.0 mi",specialty:"Roof Repair & Replacement",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
-    {name:"Derby Roofing Co.",rating:"4.8",reviews:"187",distance:"4.6 mi",specialty:"Residential Roofing",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
-    {name:"Louisville Roof Pros",rating:"4.7",reviews:"133",distance:"6.4 mi",specialty:"Roof Inspection",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}],
-  Painting: [
-    {name:"Fresh Coat Louisville",rating:"4.9",reviews:"205",distance:"2.6 mi",specialty:"Interior & Exterior Painting",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
-    {name:"Bluegrass Painters",rating:"4.8",reviews:"174",distance:"4.2 mi",specialty:"Residential Painting",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
-    {name:"Derby City Paint Co.",rating:"4.7",reviews:"121",distance:"5.8 mi",specialty:"Interior Painting",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}]
+Plumbing: [
+{name:"Mike's Plumbing",rating:"4.8",reviews:"218",distance:"2.1 mi",specialty:"Licensed Plumber",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
+{name:"Blue River Plumbing",rating:"4.9",reviews:"164",distance:"3.4 mi",specialty:"Residential Plumbing",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
+{name:"Louisville Pipe Pros",rating:"4.7",reviews:"129",distance:"5.2 mi",specialty:"Emergency Plumbing",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}],
+Electrical: [
+{name:"Bright Electric",rating:"4.9",reviews:"342",distance:"1.8 mi",specialty:"Licensed Electrician",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
+{name:"Bluegrass Electrical",rating:"4.8",reviews:"201",distance:"3.7 mi",specialty:"Residential Electric",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
+{name:"Derby City Electric",rating:"4.7",reviews:"177",distance:"6.0 mi",specialty:"Repairs & Installations",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}],
+HVAC: [
+{name:"Summit HVAC",rating:"4.7",reviews:"186",distance:"2.8 mi",specialty:"Heating & Cooling",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
+{name:"AirCare Louisville",rating:"4.9",reviews:"245",distance:"4.1 mi",specialty:"AC & Furnace Service",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
+{name:"Comfort Pros HVAC",rating:"4.8",reviews:"153",distance:"5.6 mi",specialty:"Residential HVAC",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}],
+Handyman: [
+{name:"Louisville Handyman Co.",rating:"4.8",reviews:"198",distance:"2.4 mi",specialty:"Home Repairs",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
+{name:"FixRight Home Services",rating:"4.9",reviews:"142",distance:"3.9 mi",specialty:"General Handyman",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
+{name:"Derby Home Repair",rating:"4.7",reviews:"116",distance:"5.3 mi",specialty:"Repairs & Assembly",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}],
+Roofing: [
+{name:"Bluegrass Roofing",rating:"4.9",reviews:"221",distance:"3.0 mi",specialty:"Roof Repair & Replacement",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
+{name:"Derby Roofing Co.",rating:"4.8",reviews:"187",distance:"4.6 mi",specialty:"Residential Roofing",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
+{name:"Louisville Roof Pros",rating:"4.7",reviews:"133",distance:"6.4 mi",specialty:"Roof Inspection",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}],
+Painting: [
+{name:"Fresh Coat Louisville",rating:"4.9",reviews:"205",distance:"2.6 mi",specialty:"Interior & Exterior Painting",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"},
+{name:"Bluegrass Painters",rating:"4.8",reviews:"174",distance:"4.2 mi",specialty:"Residential Painting",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"},
+{name:"Derby City Paint Co.",rating:"4.7",reviews:"121",distance:"5.8 mi",specialty:"Interior Painting",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"}]
 };
-
 function quick(trade){
-  document.getElementById('trade').value=trade;
-  document.getElementById('need').focus();
-  showToast(trade+' selected — click Find available pros');
+document.getElementById('trade').value=trade;
+document.getElementById('need').focus();
+showToast(trade+' selected — click Find available pros');
+}
+function getRegisteredTradeMatchPros(trade){
+const matches=[];
+const keys=['tradematch_contractor_accounts_v1','tradematch_contractor_accounts','tradematch_contractor_account_v3','tradematch_contractor_account_v2'];
+const seen=new Set();
+keys.forEach(key=>{
+try{
+const raw=JSON.parse(localStorage.getItem(key)||'null');
+const accounts=Array.isArray(raw)?raw:(raw&&raw.email?[raw]:[]);
+accounts.forEach(a=>{
+const name=String(a.name||'').trim();
+const accountTrade=String(a.trade||'').trim();
+const business=String(a.businessName||'').trim();
+if(!name || !accountTrade || accountTrade.toLowerCase()!==trade.toLowerCase())return;
+const id=(a.email||name+'|'+business).toLowerCase();
+if(seen.has(id))return;
+seen.add(id);
+matches.push({
+name:business||name,
+rating:a.rating||'New',
+reviews:a.reviews||'0',
+distance:a.distance||'Local',
+specialty:a.specialty||trade+' Professional',
+photo:a.profilePicture||'',
+registered:true,
+accountName:name,
+email:a.email||''
+});
+});
+}catch(e){}
+});
+return matches;
+}
+let currentCustomerPros=[];
+let currentCustomerTrade='';
+function renderCustomerPros(showAll=false){
+const grid=document.getElementById('resultsGrid');
+const sorted=[...currentCustomerPros].sort((a,b)=>{
+const ar=parseFloat(a.rating)||0, br=parseFloat(b.rating)||0;
+if(br!==ar) return br-ar;
+return (parseInt(b.reviews)||0)-(parseInt(a.reviews)||0);
+});
+const visible=showAll?sorted:sorted.slice(0,5);
+grid.innerHTML=visible.map(p=>`
+<div class="pro">
+<img src="${p.photo||('data:image/svg+xml;charset=UTF-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150"><rect width="150" height="150" fill="#0b2545"/><text x="75" y="88" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="white">'+String(p.name||'TM').split(/\s+/).filter(Boolean).slice(0,2).map(x=>x[0]).join('').toUpperCase()+'</text></svg>'))}" alt="${p.name}">
+<div class="pro-info">
+<b>${p.name} ✓</b>
+<div class="rating">★ ${p.rating} (${p.reviews})</div>
+<span class="tag">${p.specialty}</span>
+<div class="pro-distance">⌖ ${p.distance} away</div>
+<div class="pro-available"><i></i> Available for jobs</div><br>
+<button class="book-pro" onclick="bookPro('${String(p.name).replace(/'/g,"\'")}')">View profile & book</button>
+</div>
+</div>`).join('');
+const existing=document.getElementById('showAllProsBtn');
+if(existing) existing.remove();
+if(sorted.length>5 && !showAll){
+const wrap=document.createElement('div');
+wrap.id='showAllProsBtn';
+wrap.style='text-align:center;margin-top:22px;';
+wrap.innerHTML='<button type="button" onclick="showAllCustomerPros()" style="border:1px solid #1769e8;background:#fff;color:#1769e8;border-radius:10px;padding:12px 24px;font-weight:850;cursor:pointer;">Show all '+sorted.length+' '+currentCustomerTrade+' pros →</button>';
+grid.parentElement.appendChild(wrap);
+}
+}
+function showAllCustomerPros(){
+// Rebuild the full list at click time so every contractor currently registered
+// on this browser/site prototype is included, not just the top-rated results.
+const registered=getRegisteredTradeMatchPros(currentCustomerTrade);
+const combined=[...(tradePros[currentCustomerTrade]||[]), ...registered];
+const seen=new Set();
+currentCustomerPros=combined.filter(p=>{
+const id=String(p.email||p.name||'').trim().toLowerCase();
+if(!id || seen.has(id)) return false;
+seen.add(id);
+return true;
+});
+renderCustomerPros(true);
+const title=document.getElementById('resultsTitle');
+const subtitle=document.getElementById('resultsSubtitle');
+if(title) title.textContent='All '+currentCustomerTrade+' Pros';
+if(subtitle) subtitle.textContent='Showing every TradeMatch contractor currently available in '+currentCustomerTrade+'.';
+showToast('Showing all '+currentCustomerPros.length+' '+currentCustomerTrade.toLowerCase()+' contractors');
 }
 function findPros(){
-  const trade=document.getElementById('trade').value;
-  const need=document.getElementById('need').value.trim();
-  if(trade==='Choose a trade'){showToast('Choose a trade first');return;}
-  const pros=tradePros[trade]||[];
-  document.getElementById('resultsTitle').textContent='Available '+trade+' Pros';
-  document.getElementById('resultsSubtitle').textContent=need?'Matching pros for: "'+need+'"':'Available '+trade.toLowerCase()+' professionals near Louisville, KY';
-  document.getElementById('resultsGrid').innerHTML=pros.map(p=>`
-    <div class="pro">
-      <img src="${p.photo}" alt="${p.name}">
-      <div class="pro-info">
-        <b>${p.name} ✓</b>
-        <div class="rating">★ ${p.rating} (${p.reviews})</div>
-        <span class="tag">${p.specialty}</span>
-        <div class="pro-distance">⌖ ${p.distance} away</div>
-        <div class="pro-available"><i></i> Available for jobs</div><br>
-        <button class="book-pro" onclick="bookPro('${p.name.replace(/'/g,"\\'")}')">View profile & book</button>
-      </div>
-    </div>`).join('');
-  document.getElementById('matchingResults').style.display='block';
-  document.getElementById('matchingResults').scrollIntoView({behavior:'smooth',block:'start'});
-  showToast(pros.length+' '+trade.toLowerCase()+' pros found');
+let trade=document.getElementById('trade').value;
+const need=document.getElementById('need').value.trim();
+if(trade==='Choose a trade'){
+const q=need.toLowerCase();
+const inferred=Object.keys(tradePros).find(t=>{
+const words={Plumbing:['plumb','leak','drain','pipe','faucet','water heater'],Electrical:['electric','outlet','wiring','light','breaker'],HVAC:['hvac','air conditioning','ac ','furnace','heating','cooling','thermostat'],Handyman:['handyman','repair','mount','assemble','fix'],Roofing:['roof','shingle','gutter'],Painting:['paint','wall','interior','exterior']};
+return (words[t]||[]).some(w=>q.includes(w));
+});
+if(inferred){trade=inferred;document.getElementById('trade').value=trade;}
+else{showToast('Choose a trade or describe your problem first');return;}
+}
+const builtIn=tradePros[trade]||[];
+const registered=getRegisteredTradeMatchPros(trade);
+currentCustomerPros=[...builtIn,...registered];
+currentCustomerTrade=trade;
+document.getElementById('resultsTitle').textContent='Top Rated '+trade+' Pros';
+document.getElementById('resultsSubtitle').textContent=need?'Top-rated matching pros for: "'+need+'"':'Top-rated '+trade.toLowerCase()+' professionals near Louisville, KY';
+renderCustomerPros(false);
+document.getElementById('matchingResults').style.display='block';
+document.getElementById('matchingResults').scrollIntoView({behavior:'smooth',block:'start'});
+showToast('Showing the top '+Math.min(5,currentCustomerPros.length)+' '+trade.toLowerCase()+' pros');
 }
 function clearResults(){document.getElementById('matchingResults').style.display='none';}
 const profileData = {
-  "Mike's Plumbing": {specialty:"Licensed Plumber",company:"Mike's Plumbing LLC",email:"mike@tradematch.example",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80",phone:"(502) 555-0148",rating:"4.8",reviews:"218",about:"Mike's Plumbing provides dependable residential plumbing service throughout Louisville. From leaks and clogged drains to water heaters, the team focuses on clear communication and quality work.",services:["Leak Repair","Drain Cleaning","Water Heaters","Fixture Installation"]},
-  "Blue River Plumbing": {specialty:"Residential Plumbing",rating:"4.9",reviews:"164",about:"Blue River Plumbing helps homeowners with everyday plumbing repairs and installations, with a focus on fast response times and clean, professional work.",services:["Pipe Repair","Faucets","Water Heaters","Emergency Service"]},
-  "Louisville Pipe Pros": {specialty:"Emergency Plumbing",rating:"4.7",reviews:"129",about:"Louisville Pipe Pros specializes in residential plumbing repairs and emergency service for homeowners who need a reliable local plumber.",services:["Emergency Plumbing","Leaks","Sewer Lines","Drain Repair"]},
-  "Bright Electric": {specialty:"Licensed Electrician",company:"Bright Electric LLC",email:"hello@tradematch.example",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",phone:"(502) 555-0182",rating:"4.9",reviews:"342",about:"Bright Electric handles residential electrical repairs and installations with an emphasis on safety, dependable scheduling, and professional workmanship.",services:["Outlet Repair","Lighting","Panel Service","Electrical Repairs"]},
-  "Bluegrass Electrical": {specialty:"Residential Electric",rating:"4.8",reviews:"201",about:"Bluegrass Electrical provides residential electrical service for repairs, upgrades, and installations across the Louisville area.",services:["Outlets","Lighting","Wiring","Installations"]},
-  "Derby City Electric": {specialty:"Repairs & Installations",rating:"4.7",reviews:"177",about:"Derby City Electric helps homeowners solve electrical problems and complete new installations with licensed local professionals.",services:["Troubleshooting","Outlets","Fans","Lighting"]},
-  "Summit HVAC": {specialty:"Heating & Cooling",rating:"4.7",reviews:"186",about:"Summit HVAC provides residential heating and cooling service, including AC repairs, furnace service, and seasonal maintenance.",services:["AC Repair","Furnaces","Maintenance","Thermostats"]},
-  "AirCare Louisville": {specialty:"AC & Furnace Service",rating:"4.9",reviews:"245",about:"AirCare Louisville specializes in keeping homes comfortable year-round with responsive HVAC repair and maintenance.",services:["AC Service","Furnaces","Heat Pumps","Maintenance"]},
-  "Comfort Pros HVAC": {specialty:"Residential HVAC",rating:"4.8",reviews:"153",about:"Comfort Pros HVAC provides reliable residential heating and cooling solutions with straightforward service and scheduling.",services:["AC Repair","Heating","Ductwork","Tune-Ups"]},
-  "Louisville Handyman Co.": {specialty:"Home Repairs",rating:"4.8",reviews:"198",about:"Louisville Handyman Co. helps homeowners tackle the smaller repairs, installations, and projects that keep a home running smoothly.",services:["Home Repairs","Assembly","Doors","Fixtures"]},
-  "FixRight Home Services": {specialty:"General Handyman",rating:"4.9",reviews:"142",about:"FixRight Home Services offers dependable handyman help for a wide range of household projects and repairs.",services:["Repairs","Assembly","Mounting","Installations"]},
-  "Derby Home Repair": {specialty:"Repairs & Assembly",rating:"4.7",reviews:"116",about:"Derby Home Repair provides practical help with household repairs, assembly, and improvement projects.",services:["Assembly","Repairs","Shelving","Fixtures"]},
-  "Bluegrass Roofing": {specialty:"Roof Repair & Replacement",rating:"4.9",reviews:"221",about:"Bluegrass Roofing provides residential roof inspections, repairs, and replacement services with an emphasis on dependable workmanship.",services:["Roof Repair","Inspections","Shingles","Replacement"]},
-  "Derby Roofing Co.": {specialty:"Residential Roofing",rating:"4.8",reviews:"187",about:"Derby Roofing Co. serves Louisville homeowners with residential roof repair, maintenance, and replacement services.",services:["Roof Repair","Replacement","Inspections","Maintenance"]},
-  "Louisville Roof Pros": {specialty:"Roof Inspection",rating:"4.7",reviews:"133",about:"Louisville Roof Pros helps homeowners identify and address roofing issues before they become larger problems.",services:["Inspections","Leak Repair","Shingles","Maintenance"]},
-  "Fresh Coat Louisville": {specialty:"Interior & Exterior Painting",rating:"4.9",reviews:"205",about:"Fresh Coat Louisville provides professional interior and exterior painting for homeowners looking for a clean, polished finish.",services:["Interior Painting","Exterior Painting","Trim","Touch-Ups"]},
-  "Bluegrass Painters": {specialty:"Residential Painting",rating:"4.8",reviews:"174",about:"Bluegrass Painters specializes in residential painting projects with careful prep work and attention to detail.",services:["Walls","Ceilings","Trim","Exterior"]},
-  "Derby City Paint Co.": {specialty:"Interior Painting",rating:"4.7",reviews:"121",about:"Derby City Paint Co. helps homeowners refresh their spaces with professional interior painting and detail work.",services:["Interior Painting","Accent Walls","Trim","Touch-Ups"]}
+"Mike's Plumbing": {specialty:"Licensed Plumber",company:"Mike's Plumbing LLC",email:"mike@tradematch.example",photo:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80",phone:"(502) 555-0148",rating:"4.8",reviews:"218",about:"Mike's Plumbing provides dependable residential plumbing service throughout Louisville. From leaks and clogged drains to water heaters, the team focuses on clear communication and quality work.",services:["Leak Repair","Drain Cleaning","Water Heaters","Fixture Installation"]},
+"Blue River Plumbing": {specialty:"Residential Plumbing",rating:"4.9",reviews:"164",about:"Blue River Plumbing helps homeowners with everyday plumbing repairs and installations, with a focus on fast response times and clean, professional work.",services:["Pipe Repair","Faucets","Water Heaters","Emergency Service"]},
+"Louisville Pipe Pros": {specialty:"Emergency Plumbing",rating:"4.7",reviews:"129",about:"Louisville Pipe Pros specializes in residential plumbing repairs and emergency service for homeowners who need a reliable local plumber.",services:["Emergency Plumbing","Leaks","Sewer Lines","Drain Repair"]},
+"Bright Electric": {specialty:"Licensed Electrician",company:"Bright Electric LLC",email:"hello@tradematch.example",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",phone:"(502) 555-0182",rating:"4.9",reviews:"342",about:"Bright Electric handles residential electrical repairs and installations with an emphasis on safety, dependable scheduling, and professional workmanship.",services:["Outlet Repair","Lighting","Panel Service","Electrical Repairs"]},
+"Bluegrass Electrical": {specialty:"Residential Electric",rating:"4.8",reviews:"201",about:"Bluegrass Electrical provides residential electrical service for repairs, upgrades, and installations across the Louisville area.",services:["Outlets","Lighting","Wiring","Installations"]},
+"Derby City Electric": {specialty:"Repairs & Installations",rating:"4.7",reviews:"177",about:"Derby City Electric helps homeowners solve electrical problems and complete new installations with licensed local professionals.",services:["Troubleshooting","Outlets","Fans","Lighting"]},
+"Summit HVAC": {specialty:"Heating & Cooling",rating:"4.7",reviews:"186",about:"Summit HVAC provides residential heating and cooling service, including AC repairs, furnace service, and seasonal maintenance.",services:["AC Repair","Furnaces","Maintenance","Thermostats"]},
+"AirCare Louisville": {specialty:"AC & Furnace Service",rating:"4.9",reviews:"245",about:"AirCare Louisville specializes in keeping homes comfortable year-round with responsive HVAC repair and maintenance.",services:["AC Service","Furnaces","Heat Pumps","Maintenance"]},
+"Comfort Pros HVAC": {specialty:"Residential HVAC",rating:"4.8",reviews:"153",about:"Comfort Pros HVAC provides reliable residential heating and cooling solutions with straightforward service and scheduling.",services:["AC Repair","Heating","Ductwork","Tune-Ups"]},
+"Louisville Handyman Co.": {specialty:"Home Repairs",rating:"4.8",reviews:"198",about:"Louisville Handyman Co. helps homeowners tackle the smaller repairs, installations, and projects that keep a home running smoothly.",services:["Home Repairs","Assembly","Doors","Fixtures"]},
+"FixRight Home Services": {specialty:"General Handyman",rating:"4.9",reviews:"142",about:"FixRight Home Services offers dependable handyman help for a wide range of household projects and repairs.",services:["Repairs","Assembly","Mounting","Installations"]},
+"Derby Home Repair": {specialty:"Repairs & Assembly",rating:"4.7",reviews:"116",about:"Derby Home Repair provides practical help with household repairs, assembly, and improvement projects.",services:["Assembly","Repairs","Shelving","Fixtures"]},
+"Bluegrass Roofing": {specialty:"Roof Repair & Replacement",rating:"4.9",reviews:"221",about:"Bluegrass Roofing provides residential roof inspections, repairs, and replacement services with an emphasis on dependable workmanship.",services:["Roof Repair","Inspections","Shingles","Replacement"]},
+"Derby Roofing Co.": {specialty:"Residential Roofing",rating:"4.8",reviews:"187",about:"Derby Roofing Co. serves Louisville homeowners with residential roof repair, maintenance, and replacement services.",services:["Roof Repair","Replacement","Inspections","Maintenance"]},
+"Louisville Roof Pros": {specialty:"Roof Inspection",rating:"4.7",reviews:"133",about:"Louisville Roof Pros helps homeowners identify and address roofing issues before they become larger problems.",services:["Inspections","Leak Repair","Shingles","Maintenance"]},
+"Fresh Coat Louisville": {specialty:"Interior & Exterior Painting",rating:"4.9",reviews:"205",about:"Fresh Coat Louisville provides professional interior and exterior painting for homeowners looking for a clean, polished finish.",services:["Interior Painting","Exterior Painting","Trim","Touch-Ups"]},
+"Bluegrass Painters": {specialty:"Residential Painting",rating:"4.8",reviews:"174",about:"Bluegrass Painters specializes in residential painting projects with careful prep work and attention to detail.",services:["Walls","Ceilings","Trim","Exterior"]},
+"Derby City Paint Co.": {specialty:"Interior Painting",rating:"4.7",reviews:"121",about:"Derby City Paint Co. helps homeowners refresh their spaces with professional interior painting and detail work.",services:["Interior Painting","Accent Walls","Trim","Touch-Ups"]}
 };
-
 let selectedProName = "";
-
 function bookPro(name){
-  const cards = document.querySelectorAll('#resultsGrid .pro');
-  let photo = "";
-  cards.forEach(card => {
-    const title = card.querySelector('b');
-    if(title && title.textContent.includes(name)){
-      const img = card.querySelector('img');
-      if(img) photo = img.src;
-    }
-  });
-  const p = profileData[name] || {specialty:"Local Professional",rating:"4.8",reviews:"100",about:"A trusted local professional available through TradeMatch.",services:["Professional Service"]};
-  selectedProName = name;
-  document.getElementById('profileName').textContent = name;
-  document.getElementById('profileSpecialty').textContent = p.specialty;
-  document.getElementById('profileRating').textContent = '★ '+p.rating+' ('+p.reviews+' reviews)';
-  document.getElementById('profileAbout').textContent = p.about;
-  document.getElementById('profileCompany').textContent = p.company || name;
-  window.currentProContact = {email:p.email || 'contact@tradematch.example', phone:p.phone || '(502) 555-0100'};
-  document.getElementById('profileServices').innerHTML = p.services.map(s=>'<span>'+s+'</span>').join('');
-  document.getElementById('profilePhoto').src = photo || p.photo || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80';
-  document.getElementById('bookingName').textContent = name;
-  document.getElementById('bookingPanel').classList.remove('open');
-  document.getElementById('messagePanel').classList.remove('open');
-  document.getElementById('profileModal').classList.add('open');
+const cards = document.querySelectorAll('#resultsGrid .pro');
+let photo = "";
+cards.forEach(card => {
+const title = card.querySelector('b');
+if(title && title.textContent.includes(name)){
+const img = card.querySelector('img');
+if(img) photo = img.src;
 }
-
+});
+const p = profileData[name] || {specialty:"Local Professional",rating:"4.8",reviews:"100",about:"A trusted local professional available through TradeMatch.",services:["Professional Service"]};
+selectedProName = name;
+document.getElementById('profileName').textContent = name;
+document.getElementById('profileSpecialty').textContent = p.specialty;
+document.getElementById('profileRating').textContent = '★ '+p.rating+' ('+p.reviews+' reviews)';
+document.getElementById('profileAbout').textContent = p.about;
+document.getElementById('profileCompany').textContent = p.company || name;
+window.currentProContact = {email:p.email || 'contact@tradematch.example', phone:p.phone || '(502) 555-0100'};
+document.getElementById('profileServices').innerHTML = p.services.map(s=>'<span>'+s+'</span>').join('');
+document.getElementById('profilePhoto').src = photo || p.photo || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80';
+document.getElementById('bookingName').textContent = name;
+document.getElementById('bookingPanel').classList.remove('open');
+document.getElementById('messagePanel').classList.remove('open');
+document.getElementById('profileModal').classList.add('open');
+}
 function contactPro(method){
-  const c=window.currentProContact||{};
-  if(method==='email'){ window.location.href='mailto:'+c.email+'?subject=TradeMatch%20Service%20Request%20for%20'+encodeURIComponent(selectedProName); showToast('Opening email to '+selectedProName); }
-  else if(method==='phone'){ window.location.href='tel:'+c.phone; showToast('Calling '+selectedProName); }
-  else if(method==='message'){ document.getElementById('messageName').textContent=selectedProName; document.getElementById('messagePanel').classList.add('open'); document.getElementById('messageText').focus(); }
+const c=window.currentProContact||{};
+if(method==='email'){ window.location.href='mailto:'+c.email+'?subject=TradeMatch%20Service%20Request%20for%20'+encodeURIComponent(selectedProName); showToast('Opening email to '+selectedProName); }
+else if(method==='phone'){ window.location.href='tel:'+c.phone; showToast('Calling '+selectedProName); }
+else if(method==='message'){ document.getElementById('messageName').textContent=selectedProName; document.getElementById('messagePanel').classList.add('open'); document.getElementById('messageText').focus(); }
 }
-
 function sendProMessage(){
-  const msg=document.getElementById('messageText').value.trim();
-  if(!msg){showToast('Write a message first');return;}
-  document.getElementById('messageText').value='';
-  document.getElementById('messagePanel').classList.remove('open');
-  showToast('Message sent to '+selectedProName+'!');
+const msg=document.getElementById('messageText').value.trim();
+if(!msg){showToast('Write a message first');return;}
+document.getElementById('messageText').value='';
+document.getElementById('messagePanel').classList.remove('open');
+showToast('Message sent to '+selectedProName+'!');
 }
-
 function closeProfile(){
-  document.getElementById('profileModal').classList.remove('open');
+document.getElementById('profileModal').classList.remove('open');
 }
 function closeProfileOnBackdrop(e){
-  if(e.target.id==='profileModal') closeProfile();
+if(e.target.id==='profileModal') closeProfile();
 }
 function showBookingForm(){
-  document.getElementById('bookingPanel').classList.add('open');
-  document.getElementById('bookingPanel').scrollIntoView({behavior:'smooth',block:'nearest'});
+document.getElementById('bookingPanel').classList.add('open');
+document.getElementById('bookingPanel').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function confirmBooking(){
-  const date=document.getElementById('bookingDate').value;
-  const time=document.getElementById('bookingTime').value;
-  if(!date || time==='Choose a time'){
-    showToast('Choose a date and time first');
-    return;
-  }
-  document.getElementById('bookingPanel').classList.remove('open');
-  closeProfile();
-  showToast('Booking request sent to '+selectedProName+'!');
+const date=document.getElementById('bookingDate').value;
+const time=document.getElementById('bookingTime').value;
+if(!date || time==='Choose a time'){
+showToast('Choose a date and time first');
+return;
 }
-
+document.getElementById('bookingPanel').classList.remove('open');
+closeProfile();
+showToast('Booking request sent to '+selectedProName+'!');
+}
 
 let tradeMapInstance = null;
-
 const tradeJobs = [
-  {title:"Leaking kitchen sink", trade:"Plumbing", area:"Middletown", lat:38.2453, lng:-85.5396},
-  {title:"Electrical outlet repair", trade:"Electrical", area:"Jeffersontown", lat:38.1940, lng:-85.5600},
-  {title:"AC not cooling", trade:"HVAC", area:"Hurstbourne", lat:38.2130, lng:-85.5840},
-  {title:"Drywall patch", trade:"Handyman", area:"St. Matthews", lat:38.2520, lng:-85.6550},
-  {title:"Roof inspection", trade:"Roofing", area:"Anchorage", lat:38.2660, lng:-85.5350},
-  {title:"Interior painting", trade:"Painting", area:"Old Louisville", lat:38.2350, lng:-85.7580},
-  {title:"Water heater service", trade:"Plumbing", area:"Fern Creek", lat:38.1590, lng:-85.5800},
-  {title:"Fence repair", trade:"Handyman", area:"Eastwood", lat:38.2140, lng:-85.4600}
+{title:"Leaking kitchen sink", trade:"Plumbing", area:"Middletown", lat:38.2453, lng:-85.5396},
+{title:"Electrical outlet repair", trade:"Electrical", area:"Jeffersontown", lat:38.1940, lng:-85.5600},
+{title:"AC not cooling", trade:"HVAC", area:"Hurstbourne", lat:38.2130, lng:-85.5840},
+{title:"Drywall patch", trade:"Handyman", area:"St. Matthews", lat:38.2520, lng:-85.6550},
+{title:"Roof inspection", trade:"Roofing", area:"Anchorage", lat:38.2660, lng:-85.5350},
+{title:"Interior painting", trade:"Painting", area:"Old Louisville", lat:38.2350, lng:-85.7580},
+{title:"Water heater service", trade:"Plumbing", area:"Fern Creek", lat:38.1590, lng:-85.5800},
+{title:"Fence repair", trade:"Handyman", area:"Eastwood", lat:38.2140, lng:-85.4600}
 ];
-
 function makeJobIcon(job){
-  const colors = {Plumbing:"#2563eb", Electrical:"#f59e0b", HVAC:"#0ea5e9", Handyman:"#7c3aed", Roofing:"#dc2626", Painting:"#16a34a"};
-  const letter = job.trade === "Electrical" ? "E" : job.trade === "Roofing" ? "R" : job.trade === "HVAC" ? "H" : job.trade === "Painting" ? "P" : job.trade === "Handyman" ? "H" : "P";
-  return L.divIcon({
-    className:"trade-job-marker",
-    html:`<div style="width:32px;height:32px;border-radius:50%;background:${colors[job.trade] || "#2563eb"};border:3px solid white;box-shadow:0 2px 8px rgba(15,23,42,.28);display:grid;place-items:center;color:white;font-weight:900;font-size:11px;">${letter}</div>`,
-    iconSize:[32,32],
-    iconAnchor:[16,16],
-    popupAnchor:[0,-14]
-  });
+const colors = {Plumbing:"#2563eb", Electrical:"#f59e0b", HVAC:"#0ea5e9", Handyman:"#7c3aed", Roofing:"#dc2626", Painting:"#16a34a"};
+const letter = job.trade === "Electrical" ? "E" : job.trade === "Roofing" ? "R" : job.trade === "HVAC" ? "H" : job.trade === "Painting" ? "P" : job.trade === "Handyman" ? "H" : "P";
+return L.divIcon({
+className:"trade-job-marker",
+html:`<div style="width:32px;height:32px;border-radius:50%;background:${colors[job.trade] || "#2563eb"};border:3px solid white;box-shadow:0 2px 8px rgba(15,23,42,.28);display:grid;place-items:center;color:white;font-weight:900;font-size:11px;">${letter}</div>`,
+iconSize:[32,32],
+iconAnchor:[16,16],
+popupAnchor:[0,-14]
+});
 }
-
 function initTradeMap(){
-  if(typeof L === "undefined") return;
-  if(tradeMapInstance){
-    tradeMapInstance.invalidateSize();
-    return;
-  }
-
-  // Center on Louisville while keeping Middletown clearly visible.
-  tradeMapInstance = L.map("tradeMap", {scrollWheelZoom:true}).setView([38.2453, -85.60], 11);
-
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom:19,
-    attribution:'© OpenStreetMap contributors'
-  }).addTo(tradeMapInstance);
-
-  tradeJobs.forEach((job, index)=>{
-    const marker = L.marker([job.lat, job.lng], {icon:makeJobIcon(job)})
-      .addTo(tradeMapInstance)
-      .bindPopup(`<div class="leaflet-job-title">${job.title}</div><div class="leaflet-job-meta">${job.trade} · ${job.area}</div>`);
-    job.marker = marker;
-  });
-
-  // Middletown is highlighted with a small label, not an oval/blue region.
-  L.marker([38.2453, -85.5396], {
-    icon:L.divIcon({
-      className:"middletown-label",
-      html:'<div style="background:white;border:1px solid #cbd5e1;border-radius:7px;padding:4px 7px;font-weight:800;font-size:11px;box-shadow:0 2px 7px rgba(15,23,42,.12);">Middletown</div>',
-      iconSize:[0,0],
-      iconAnchor:[0,42]
-    }),
-    interactive:false
-  }).addTo(tradeMapInstance);
+if(typeof L === "undefined") return;
+if(tradeMapInstance){
+tradeMapInstance.invalidateSize();
+return;
 }
-
+// Center on Louisville while keeping Middletown clearly visible.
+tradeMapInstance = L.map("tradeMap", {scrollWheelZoom:true}).setView([38.2453, -85.60], 11);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+maxZoom:19,
+attribution:'© OpenStreetMap contributors'
+}).addTo(tradeMapInstance);
+tradeJobs.forEach((job, index)=>{
+const marker = L.marker([job.lat, job.lng], {icon:makeJobIcon(job)})
+.addTo(tradeMapInstance)
+.bindPopup(`<div class="leaflet-job-title">${job.title}</div><div class="leaflet-job-meta">${job.trade} · ${job.area}</div>`);
+job.marker = marker;
+});
+// Middletown is highlighted with a small label, not an oval/blue region.
+L.marker([38.2453, -85.5396], {
+icon:L.divIcon({
+className:"middletown-label",
+html:'<div style="background:white;border:1px solid #cbd5e1;border-radius:7px;padding:4px 7px;font-weight:800;font-size:11px;box-shadow:0 2px 7px rgba(15,23,42,.12);">Middletown</div>',
+iconSize:[0,0],
+iconAnchor:[0,42]
+}),
+interactive:false
+}).addTo(tradeMapInstance);
+}
 function showNearbyActivity(){
-  const panel = document.getElementById('nearbyActivityPanel');
-  const dashboard = document.querySelector('.contractor .dash');
-  const pages = document.getElementById('contractorPages');
-
-  if(pages) pages.style.display='none';
-  if(dashboard) dashboard.style.display='none';
-
-  if(panel){
-    panel.style.display='block';
-    panel.scrollIntoView({behavior:'smooth', block:'start'});
-  }
+const panel = document.getElementById('nearbyActivityPanel');
+const dashboard = document.querySelector('.contractor .dash');
+const pages = document.getElementById('contractorPages');
+if(pages) pages.style.display='none';
+if(dashboard) dashboard.style.display='none';
+if(panel){
+panel.style.display='block';
+panel.scrollIntoView({behavior:'smooth', block:'start'});
 }
-
+}
 function hideNearbyActivity(){
-  const panel = document.getElementById('nearbyActivityPanel');
-  const dashboard = document.querySelector('.contractor .dash');
-  if(panel) panel.style.display='none';
-  if(dashboard){
-    dashboard.style.display='';
-    dashboard.scrollIntoView({behavior:'smooth', block:'start'});
-  }
+const panel = document.getElementById('nearbyActivityPanel');
+const dashboard = document.querySelector('.contractor .dash');
+if(panel) panel.style.display='none';
+if(dashboard){
+dashboard.style.display='';
+dashboard.scrollIntoView({behavior:'smooth', block:'start'});
 }
-
+}
 function focusTradeJob(index){
-  const job = tradeJobs[index];
-  if(!job) return;
-  if(!tradeMapInstance) initTradeMap();
-  if(tradeMapInstance && job.marker){
-    tradeMapInstance.setView([job.lat, job.lng], 13, {animate:true});
-    setTimeout(()=>job.marker.openPopup(), 250);
-  }
+const job = tradeJobs[index];
+if(!job) return;
+if(!tradeMapInstance) initTradeMap();
+if(tradeMapInstance && job.marker){
+tradeMapInstance.setView([job.lat, job.lng], 13, {animate:true});
+setTimeout(()=>job.marker.openPopup(), 250);
 }
-
+}
 function closeNearbyActivity(){
-  hideNearbyActivity();
+hideNearbyActivity();
 }
-
 function showContractorPage(page){
-  const dashboard=document.querySelector('.contractor .dash');
-  const pages=document.getElementById('contractorPages');
-
-  if(page==='dashboard'){
-    pages.style.display='none';
-    dashboard.style.display='';
-    dashboard.scrollIntoView({behavior:'smooth',block:'start'});
-    return;
-  }
-
-  dashboard.style.display='none';
-  pages.style.display='block';
-
-  const data={
-    schedule:['My Schedule','Manage appointments and your availability.'],
-    messages:['Messages','Stay in touch with customers and job requests.'],
-    earnings:['Earnings','Track your completed work and payments.'],
-    profile:['Your Profile','Manage your contractor information and services.']
-  };
-
-  document.getElementById('contractorPageTitle').textContent=data[page][0];
-  document.getElementById('contractorPageSubtitle').textContent=data[page][1];
-
-  document.querySelectorAll('.contractor-page').forEach(x=>x.classList.remove('active'));
-
-  const target=document.getElementById('page'+page.charAt(0).toUpperCase()+page.slice(1));
-  target.classList.add('active');
-
-  // Jump directly to the requested section instead of leaving the user at the top.
-  setTimeout(()=>{
-    target.scrollIntoView({behavior:'smooth',block:'start'});
-  },50);
+const dashboard=document.querySelector('.contractor .dash');
+const pages=document.getElementById('contractorPages');
+if(page==='dashboard'){
+pages.style.display='none';
+dashboard.style.display='';
+dashboard.scrollIntoView({behavior:'smooth',block:'start'});
+return;
 }
-
+dashboard.style.display='none';
+pages.style.display='block';
+const data={
+schedule:['My Schedule','Manage appointments and your availability.'],
+messages:['Messages','Stay in touch with customers and job requests.'],
+earnings:['Earnings','Track your completed work and payments.'],
+profile:['Your Profile','Manage your contractor information and services.']
+};
+document.getElementById('contractorPageTitle').textContent=data[page][0];
+document.getElementById('contractorPageSubtitle').textContent=data[page][1];
+document.querySelectorAll('.contractor-page').forEach(x=>x.classList.remove('active'));
+const target=document.getElementById('page'+page.charAt(0).toUpperCase()+page.slice(1));
+target.classList.add('active');
+// Jump directly to the requested section instead of leaving the user at the top.
+setTimeout(()=>{
+target.scrollIntoView({behavior:'smooth',block:'start'});
+},50);
+}
 function startQuote(btn){btn.textContent='Quote Started';btn.disabled=true;showToast('Quote started — demo action')}
 </script>
-
 <script>
 const contractorJobs=[
- {title:'Kitchen Outlet Repair',meta:'Louisville, KY · 3.2 mi · Electrical',description:'The customer reports that a kitchen outlet is not working. Inspect the outlet, diagnose the issue, repair or replace the outlet as needed, and confirm that it is operating safely. Customer is looking for a licensed electrician.',range:[120,180],images:['https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80']},
- {title:'AC Not Cooling',meta:'Louisville, KY · 4.7 mi · HVAC',description:'The home AC unit is running but is not cooling the house properly. Check the system, identify the cause of the cooling issue, and provide the necessary service to restore normal operation. Customer requested ASAP service.',range:[200,350],images:['https://images.unsplash.com/photo-1631545806609-4b8d5e8f3f5a?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80']},
- {title:'Water Heater Installation',meta:'Louisville, KY · 6.1 mi · Plumbing',description:'Customer needs a new 50 gallon water heater installed. Remove the existing unit if necessary, install the replacement, connect the plumbing and required lines, test for leaks, and confirm the system is working correctly.',range:[450,750],images:['https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80']}
+{title:'Kitchen Outlet Repair',meta:'Louisville, KY · 3.2 mi · Electrical',description:'The customer reports that a kitchen outlet is not working. Inspect the outlet, diagnose the issue, repair or replace the outlet as needed, and confirm that it is operating safely. Customer is looking for a licensed electrician.',range:[120,180],images:['https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80']},
+{title:'AC Not Cooling',meta:'Louisville, KY · 4.7 mi · HVAC',description:'The home AC unit is running but is not cooling the house properly. Check the system, identify the cause of the cooling issue, and provide the necessary service to restore normal operation. Customer requested ASAP service.',range:[200,350],images:['https://images.unsplash.com/photo-1631545806609-4b8d5e8f3f5a?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80']},
+{title:'Water Heater Installation',meta:'Louisville, KY · 6.1 mi · Plumbing',description:'Customer needs a new 50 gallon water heater installed. Remove the existing unit if necessary, install the replacement, connect the plumbing and required lines, test for leaks, and confirm the system is working correctly.',range:[450,750],images:['https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80']}
 ];
 let selectedContractorJob=null;
 function openJobDetails(index){
- selectedContractorJob=contractorJobs[index];
- const j=selectedContractorJob;
- document.getElementById('jobDetailTitle').textContent=j.title;
- document.getElementById('jobDetailMeta').textContent=j.meta;
- document.getElementById('jobDetailDescription').textContent=j.description;
- ['jobImage1','jobImage2','jobImage3'].forEach((id,i)=>{document.getElementById(id).src=j.images[i];});
- document.getElementById('contractorPrice').value='';
- document.getElementById('suggestedPrices').innerHTML='';
- [j.range[0],Math.round((j.range[0]+j.range[1])/2/25)*25,j.range[1]].forEach(price=>{
-   const b=document.createElement('button');b.textContent='$'+price.toLocaleString();b.onclick=()=>document.getElementById('contractorPrice').value=price;document.getElementById('suggestedPrices').appendChild(b);
- });
- document.getElementById('jobDetailsModal').style.display='flex';
+selectedContractorJob=contractorJobs[index];
+const j=selectedContractorJob;
+document.getElementById('jobDetailTitle').textContent=j.title;
+document.getElementById('jobDetailMeta').textContent=j.meta;
+document.getElementById('jobDetailDescription').textContent=j.description;
+['jobImage1','jobImage2','jobImage3'].forEach((id,i)=>{document.getElementById(id).src=j.images[i];});
+document.getElementById('contractorPrice').value='';
+document.getElementById('suggestedPrices').innerHTML='';
+[j.range[0],Math.round((j.range[0]+j.range[1])/2/25)25,j.range[1]].forEach(price=>{
+const b=document.createElement('button');b.textContent='$'+price.toLocaleString();b.onclick=()=>document.getElementById('contractorPrice').value=price;document.getElementById('suggestedPrices').appendChild(b);
+});
+document.getElementById('jobDetailsModal').style.display='flex';
 }
 function closeJobDetails(){document.getElementById('jobDetailsModal').style.display='none';}
 function submitContractorQuote(){
- const input=document.getElementById('contractorPrice');const price=Number(input.value);
- if(!price){input.focus();return;}
- closeJobDetails();
- showToast('Quote submitted for $'+price.toLocaleString()+' ✓');
+const input=document.getElementById('contractorPrice');const price=Number(input.value);
+if(!price){input.focus();return;}
+closeJobDetails();
+showToast('Quote submitted for $'+price.toLocaleString()+' ✓');
 }
 </script>
-<script>(function(){const A='tradematch_contractor_account_v3',S='tradematch_contractor_session_v3';function msg(id,t,show=true){const e=document.getElementById(id);e.textContent=t;e.style.display=show?'block':'none'}function clear(){['contractorLoginError','contractorSignupError','contractorSignupSuccess'].forEach(x=>msg(x,'',false))}window.switchContractorAuth=function(t){clear();let l=t==='login';document.getElementById('contractorLoginPanel').classList.toggle('active',l);document.getElementById('contractorSignupPanel').classList.toggle('active',!l);document.getElementById('authLoginTab').classList.toggle('active',l);document.getElementById('authSignupTab').classList.toggle('active',!l)};window.toggleContractorPassword=function(id,b){let e=document.getElementById(id),show=e.type==='password';e.type=show?'text':'password';b.textContent=show?'Hide':'Show'};window.createContractorAccount=function(){clear();let n=document.getElementById('contractorSignupName').value.trim(),e=document.getElementById('contractorSignupEmail').value.trim().toLowerCase(),p=document.getElementById('contractorSignupPassword').value,c=document.getElementById('contractorSignupConfirm').value;if(!n)return msg('contractorSignupError','Please enter your full name.');if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e))return msg('contractorSignupError','Please enter a valid email address.');if(p.length<8||!/[A-Z]/.test(p)||!/[a-z]/.test(p)||!/[0-9]/.test(p))return msg('contractorSignupError','Password needs 8+ characters, uppercase, lowercase, and a number.');if(p!==c)return msg('contractorSignupError','The passwords do not match.');let old=null;try{old=JSON.parse(localStorage.getItem(A)||'null')}catch(x){}if(old&&old.email===e)return msg('contractorSignupError','An account with this email already exists. Please log in.');localStorage.setItem(A,JSON.stringify({name:n,email:e,password:p}));document.getElementById('contractorLoginEmail').value=e;msg('contractorSignupSuccess','Account created. You can now log in.');setTimeout(()=>switchContractorAuth('login'),700)};window.contractorPortalLogin=function(){clear();let e=document.getElementById('contractorLoginEmail').value.trim(),p=document.getElementById('contractorLoginPassword').value;if(!e||!p)return msg('contractorLoginError','Enter any email and password to continue.');localStorage.setItem(S,'true');localStorage.setItem('tradematch_demo_login_email',e);document.getElementById('contractorAuthScreen').classList.add('auth-hidden')};window.contractorPortalLogout=function(){localStorage.removeItem(S);document.getElementById('contractorAuthScreen').classList.remove('auth-hidden');switchContractorAuth('login')};document.addEventListener('DOMContentLoaded',()=>{if(localStorage.getItem(S)==='true')document.getElementById('contractorAuthScreen').classList.add('auth-hidden')})})();</script>
-
+<script>
+(function(){
+const SESSION_KEY='tradematch_contractor_session_v3';
+function msg(id,t,show=true){const e=document.getElementById(id);if(!e)return;e.textContent=t;e.style.display=show?'block':'none'}
+function clear(){['contractorLoginError','contractorSignupError','contractorSignupSuccess'].forEach(x=>msg(x,'',false))}
+window.switchContractorAuth=function(t){clear();const login=t==='login';document.getElementById('contractorLoginPanel')?.classList.toggle('active',login);document.getElementById('contractorSignupPanel')?.classList.toggle('active',!login);document.getElementById('authLoginTab')?.classList.toggle('active',login);document.getElementById('authSignupTab')?.classList.toggle('active',!login)};
+window.toggleContractorPassword=function(id,b){const e=document.getElementById(id);if(!e)return;const show=e.type==='password';e.type=show?'text':'password';if(b)b.textContent=show?'Hide':'Show'};
+window.contractorPortalLogout=function(){localStorage.removeItem(SESSION_KEY);document.getElementById('contractorAuthScreen')?.classList.remove('auth-hidden');switchContractorAuth('login')};
+document.addEventListener('DOMContentLoaded',()=>{if(localStorage.getItem(SESSION_KEY)==='true')document.getElementById('contractorAuthScreen')?.classList.add('auth-hidden')});
+})();
+</script>
 <div id="customerOnlyOverlay" style="display:none;position:fixed;inset:0;z-index:99998;background:#fff;overflow:auto;">
-  <div style="position:sticky;top:0;z-index:5;background:#0b2545;color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
-    <div>
-      <div style="font-weight:950;font-size:20px;">TradeMatch</div>
-      <div style="font-size:12px;opacity:.8;">Customer Portal</div>
-    </div>
-    <button onclick="exitCustomerOnlyMode()" style="border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);color:#fff;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;">Back to Contractor Login</button>
-  </div>
-  <div id="customerOnlyContent"></div>
+<div style="position:sticky;top:0;z-index:5;background:#0b2545;color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+<div>
+<div style="font-weight:950;font-size:20px;">TradeMatch</div>
+<div style="font-size:12px;opacity:.8;">Customer Portal</div>
 </div>
-
+<button onclick="exitCustomerOnlyMode()" style="border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);color:#fff;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;">Back to Contractor Login</button>
+</div>
+<div id="customerOnlyContent"></div>
+</div>
 
 <script id="profile-menu-script">
 (function(){
-  window.toggleProfileMenu=function(e){
-    if(e) e.stopPropagation();
-    const menu=document.getElementById('profileDropdown');
-    if(menu) menu.classList.toggle('open');
-  };
-  window.closeProfileMenu=function(){
-    const menu=document.getElementById('profileDropdown');
-    if(menu) menu.classList.remove('open');
-  };
-  document.addEventListener('click',function(e){
-    const wrap=document.getElementById('profileMenu');
-    if(wrap && !wrap.contains(e.target)) closeProfileMenu();
-  });
+window.toggleProfileMenu=function(e){
+if(e) e.stopPropagation();
+const menu=document.getElementById('profileDropdown');
+if(menu) menu.classList.toggle('open');
+};
+window.closeProfileMenu=function(){
+const menu=document.getElementById('profileDropdown');
+if(menu) menu.classList.remove('open');
+};
+document.addEventListener('click',function(e){
+const wrap=document.getElementById('profileMenu');
+if(wrap && !wrap.contains(e.target)) closeProfileMenu();
+});
 })();
 </script>
-
 <script id="tradematch-side-lock-script">
 (function(){
-  const AUTH_SESSION = "tradematch_contractor_session_v2";
-
-  function findCustomerContent(){
-    // Prefer the original customer app if it exists in this combined prototype.
-    const candidates = [
-      document.querySelector("#customerView"),
-      document.querySelector(".customer-view"),
-      document.querySelector("#customerPage"),
-      document.querySelector(".customer-page")
-    ].filter(Boolean);
-    return candidates[0] || null;
-  }
-
-  function setContractorOnly(){
-    const auth = document.getElementById("contractorAuthScreen");
-    const customer = document.getElementById("customerOnlyOverlay");
-    if(customer) customer.style.display="none";
-    if(auth && localStorage.getItem(AUTH_SESSION)==="true") auth.classList.add("auth-hidden");
-
-    // Hide any customer-facing sections while contractor is authenticated.
-    document.querySelectorAll("[data-customer-side]").forEach(el=>el.style.display="none");
-  }
-
-  window.openCustomerOnlyMode=function(){
-    const auth=document.getElementById("contractorAuthScreen");
-    const overlay=document.getElementById("customerOnlyOverlay");
-    const content=document.getElementById("customerOnlyContent");
-    if(!overlay || !content) return;
-
-    // Keep contractor session intact, but temporarily hide contractor UI.
-    document.querySelectorAll("body > *:not(#contractorAuthScreen):not(#customerOnlyOverlay)").forEach(el=>{
-      if(el.id!=="customerOnlyOverlay") el.dataset.hiddenForCustomerMode = el.style.display || "";
-    });
-
-    const customer=findCustomerContent();
-    if(customer){
-      content.innerHTML="";
-      const clone=customer.cloneNode(true);
-      clone.style.display="block";
-      content.appendChild(clone);
-    }else{
-      // If the combined prototype uses different selectors, show all customer-marked elements.
-      const marked=[...document.querySelectorAll("[data-customer-side]")];
-      content.innerHTML="";
-      if(marked.length){
-        marked.forEach(el=>content.appendChild(el.cloneNode(true)));
-      }else{
-        content.innerHTML='<div style="max-width:900px;margin:70px auto;padding:24px;text-align:center;font-family:system-ui;"><h1>Customer Portal</h1><p>Customer-side content is available in the TradeMatch prototype.</p></div>';
-      }
-    }
-
-    if(auth) auth.classList.add("auth-hidden");
-    overlay.style.display="block";
-    window.scrollTo({top:0,behavior:"smooth"});
-  };
-
-  window.exitCustomerOnlyMode=function(){
-    const overlay=document.getElementById("customerOnlyOverlay");
-    if(overlay) overlay.style.display="none";
-    document.querySelectorAll("[data-hidden-for-customer-mode]").forEach(el=>{
-      el.style.display=el.dataset.hiddenForCustomerMode;
-      delete el.dataset.hiddenForCustomerMode;
-    });
-    // Return to contractor authentication rather than automatically entering the contractor side.
-    const auth=document.getElementById("contractorAuthScreen");
-    if(auth){
-      auth.classList.remove("auth-hidden");
-      if(typeof switchContractorAuth==="function") switchContractorAuth("login");
-    }
-  };
-
-  document.addEventListener("DOMContentLoaded",function(){
-    // In authenticated contractor mode, suppress obvious customer navigation/buttons.
-    if(localStorage.getItem(AUTH_SESSION)==="true") setContractorOnly();
-  });
+const AUTH_SESSION = "tradematch_contractor_session_v3";
+function findCustomerContent(){
+// Prefer the original customer app if it exists in this combined prototype.
+const candidates = [
+document.querySelector("#customerView"),
+document.querySelector(".customer-view"),
+document.querySelector("#customerPage"),
+document.querySelector(".customer-page")
+].filter(Boolean);
+return candidates[0] || null;
+}
+function setContractorOnly(){
+const auth = document.getElementById("contractorAuthScreen");
+const customer = document.getElementById("customerOnlyOverlay");
+if(customer) customer.style.display="none";
+if(auth && localStorage.getItem(AUTH_SESSION)==="true") auth.classList.add("auth-hidden");
+// Hide any customer-facing sections while contractor is authenticated.
+document.querySelectorAll("[data-customer-side]").forEach(el=>el.style.display="none");
+}
+window.openCustomerOnlyMode=function(){
+const auth=document.getElementById("contractorAuthScreen");
+const overlay=document.getElementById("customerOnlyOverlay");
+const content=document.getElementById("customerOnlyContent");
+if(!overlay || !content) return;
+// Keep contractor session intact, but temporarily hide contractor UI.
+document.querySelectorAll("body > :not(#contractorAuthScreen):not(#customerOnlyOverlay)").forEach(el=>{
+if(el.id!=="customerOnlyOverlay") el.dataset.hiddenForCustomerMode = el.style.display || "";
+});
+const customer=findCustomerContent();
+if(customer){
+content.innerHTML="";
+const clone=customer.cloneNode(true);
+clone.style.display="block";
+content.appendChild(clone);
+}else{
+// If the combined prototype uses different selectors, show all customer-marked elements.
+const marked=[...document.querySelectorAll("[data-customer-side]")];
+content.innerHTML="";
+if(marked.length){
+marked.forEach(el=>content.appendChild(el.cloneNode(true)));
+}else{
+content.innerHTML='<div style="max-width:900px;margin:70px auto;padding:24px;text-align:center;font-family:system-ui;"><h1>Customer Portal</h1><p>Customer-side content is available in the TradeMatch prototype.</p></div>';
+}
+}
+if(auth) auth.classList.add("auth-hidden");
+overlay.style.display="block";
+window.scrollTo({top:0,behavior:"smooth"});
+};
+window.exitCustomerOnlyMode=function(){
+const overlay=document.getElementById("customerOnlyOverlay");
+if(overlay) overlay.style.display="none";
+document.querySelectorAll("[data-hidden-for-customer-mode]").forEach(el=>{
+el.style.display=el.dataset.hiddenForCustomerMode;
+delete el.dataset.hiddenForCustomerMode;
+});
+// Return to contractor authentication rather than automatically entering the contractor side.
+const auth=document.getElementById("contractorAuthScreen");
+if(auth){
+auth.classList.remove("auth-hidden");
+if(typeof switchContractorAuth==="function") switchContractorAuth("login");
+}
+};
+document.addEventListener("DOMContentLoaded",function(){
+// In authenticated contractor mode, suppress obvious customer navigation/buttons.
+if(localStorage.getItem(AUTH_SESSION)==="true") setContractorOnly();
+});
 })();
 </script>
-
-
-<script id="strict-contractor-side-lock">
-(function(){
-  const SESSION_KEY = "tradematch_contractor_session_v2";
-
-  function hideCustomerSide(){
-    const selectors = [
-      "#customerView","#customerPage",".customer-view",".customer-page",
-      ".customer-nav",".customer-only","[data-customer-side]"
-    ];
-    selectors.forEach(sel=>{
-      document.querySelectorAll(sel).forEach(el=>{
-        el.style.setProperty("display","none","important");
-      });
-    });
-
-    // Hide top-level Customer/Contractor switch controls while authenticated.
-    document.querySelectorAll(
-      '[onclick*="customer"],[onclick*="Customer"],[data-view="customer"],[data-side="customer"]'
-    ).forEach(el=>{
-      if(!el.closest("#contractorAuthScreen")) {
-        el.style.setProperty("display","none","important");
-      }
-    });
-
-    document.body.classList.add("contractor-only-mode");
-  }
-
-  function showCustomerSide(){
-    document.body.classList.remove("contractor-only-mode");
-  }
-
-  function applyMode(){
-    if(false){
-      hideCustomerSide();
-    } else {
-      showCustomerSide();
-    }
-  }
-
-  window.addEventListener("load",applyMode);
-  document.addEventListener("DOMContentLoaded",applyMode);
-
-  // Re-apply after UI navigation changes, since the prototype dynamically changes panels.
-  const observer = new MutationObserver(function(){
-    if(localStorage.getItem(SESSION_KEY)==="true") hideCustomerSide();
-  });
-  observer.observe(document.documentElement,{childList:true,subtree:true});
-
-  // Wrap logout so the customer side can return normally after signing out.
-  const originalLogout = window.contractorPortalLogout;
-  if(typeof originalLogout==="function"){
-    window.contractorPortalLogout=function(){
-      localStorage.removeItem(SESSION_KEY);
-      showCustomerSide();
-      return originalLogout.apply(this,arguments);
-    };
-  }
-})();
-</script>
-
 
 <script id="mandatory-contractor-signin-gate">
 (function(){
-  const auth = document.getElementById("contractorAuthScreen");
-  if(!auth) return;
-
-  // The contractor prototype always opens at the sign-in screen.
-  // The session can still be created after a successful login.
-  auth.classList.remove("auth-hidden");
-
-  // Hide contractor content until login succeeds.
-  const contractorSelectors = [
-    ".contractor-view","#contractorView","#contractorDashboard",
-    ".contractor-only"
-  ];
-  contractorSelectors.forEach(sel=>{
-    document.querySelectorAll(sel).forEach(el=>{
-      if(el.id !== "contractorAuthScreen"){
-        el.dataset.lockedContractorContent = "true";
-        el.style.setProperty("visibility","hidden","important");
-      }
-    });
-  });
-
-  // When the existing login function hides the auth screen, reveal contractor content.
-  const reveal = ()=>{
-    if(auth.classList.contains("auth-hidden")){
-      document.querySelectorAll('[data-locked-contractor-content="true"]').forEach(el=>{
-        el.style.removeProperty("visibility");
-      });
-    }
-  };
-
-  const observer = new MutationObserver(reveal);
-  observer.observe(auth,{attributes:true,attributeFilter:["class"]});
+const auth = document.getElementById("contractorAuthScreen");
+if(!auth) return;
+// The contractor prototype always opens at the sign-in screen.
+// The session can still be created after a successful login.
+auth.classList.remove("auth-hidden");
+// Hide contractor content until login succeeds.
+const contractorSelectors = [
+".contractor-view","#contractorView","#contractorDashboard",
+".contractor-only"
+];
+contractorSelectors.forEach(sel=>{
+document.querySelectorAll(sel).forEach(el=>{
+if(el.id !== "contractorAuthScreen"){
+el.dataset.lockedContractorContent = "true";
+el.style.setProperty("visibility","hidden","important");
+}
+});
+});
+// When the existing login function hides the auth screen, reveal contractor content.
+const reveal = ()=>{
+if(auth.classList.contains("auth-hidden")){
+document.querySelectorAll('[data-locked-contractor-content="true"]').forEach(el=>{
+el.style.removeProperty("visibility");
+});
+}
+};
+const observer = new MutationObserver(reveal);
+observer.observe(auth,{attributes:true,attributeFilter:["class"]});
 })();
 </script>
-
 
 <!-- Contractor-only Personalization -->
 <div id="personalizationModal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:9999;align-items:center;justify-content:center;padding:20px;">
-  <div style="width:min(680px,96vw);max-height:88vh;overflow:auto;background:white;border-radius:18px;padding:24px;box-shadow:0 24px 70px rgba(0,0,0,.25);">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-      <div>
-        <div style="display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:11px;font-weight:800;margin-bottom:8px;">CONTRACTOR ONLY</div>
-        <h2 style="margin:0;">Personalize Your Dashboard</h2>
-        <p style="margin:7px 0 0;color:#64748b;">Choose the sections you want and arrange them in the order you want them displayed.</p>
-      </div>
-      <button onclick="closePersonalization()" style="border:0;background:#f1f5f9;border-radius:9px;padding:8px 11px;cursor:pointer;font-size:18px;">×</button>
-    </div>
-
-    <div style="margin-top:18px;padding:12px 14px;background:#f8fafc;border-radius:11px;color:#475569;font-size:13px;">
-      <strong>How it works:</strong> Check a section to show it. Use ↑ and ↓ to decide where it appears on your contractor dashboard.
-    </div>
-
-    <div id="personalizationList" style="margin-top:16px;display:grid;gap:10px;"></div>
-
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:22px;">
-      <button onclick="resetPersonalization()" style="padding:10px 14px;border:1px solid #dbe2ea;background:white;border-radius:10px;cursor:pointer;font-weight:700;">Reset to Default</button>
-      <div style="display:flex;gap:10px;">
-        <button onclick="closePersonalization()" style="padding:11px 16px;border:1px solid #dbe2ea;background:white;border-radius:10px;cursor:pointer;font-weight:700;">Cancel</button>
-        <button onclick="savePersonalization()" style="padding:11px 16px;border:0;background:#172554;color:white;border-radius:10px;cursor:pointer;font-weight:700;">Save Changes</button>
-      </div>
-    </div>
-  </div>
+<div style="width:min(680px,96vw);max-height:88vh;overflow:auto;background:white;border-radius:18px;padding:24px;box-shadow:0 24px 70px rgba(0,0,0,.25);">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+<div>
+<div style="display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:11px;font-weight:800;margin-bottom:8px;">CONTRACTOR ONLY</div>
+<h2 style="margin:0;">Personalize Your Dashboard</h2>
+<p style="margin:7px 0 0;color:#64748b;">Choose the sections you want and arrange them in the order you want them displayed.</p>
 </div>
-
+<button onclick="closePersonalization()" style="border:0;background:#f1f5f9;border-radius:9px;padding:8px 11px;cursor:pointer;font-size:18px;">×</button>
+</div>
+<div style="margin-top:18px;padding:12px 14px;background:#f8fafc;border-radius:11px;color:#475569;font-size:13px;">
+<strong>How it works:</strong> Check a section to show it. Use ↑ and ↓ to decide where it appears on your contractor dashboard.
+</div>
+<div id="personalizationList" style="margin-top:16px;display:grid;gap:10px;"></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:22px;">
+<button onclick="resetPersonalization()" style="padding:10px 14px;border:1px solid #dbe2ea;background:white;border-radius:10px;cursor:pointer;font-weight:700;">Reset to Default</button>
+<div style="display:flex;gap:10px;">
+<button onclick="closePersonalization()" style="padding:11px 16px;border:1px solid #dbe2ea;background:white;border-radius:10px;cursor:pointer;font-weight:700;">Cancel</button>
+<button onclick="savePersonalization()" style="padding:11px 16px;border:0;background:#172554;color:white;border-radius:10px;cursor:pointer;font-weight:700;">Save Changes</button>
+</div>
+</div>
+</div>
+</div>
 <script>
 const contractorSections = [
-  {id:'overview', name:'Dashboard Overview', desc:'Your key stats and overview'},
-  {id:'jobs', name:'Available Jobs', desc:'Jobs available for you to quote'},
-  {id:'activity', name:'Nearby Activity', desc:'Map and active jobs near you'},
-  {id:'quick', name:'Quick Actions', desc:'Shortcuts to common contractor tools'},
-  {id:'earnings', name:'Earnings', desc:'Your earnings and payment information'},
-  {id:'schedule', name:'Schedule', desc:'Your upcoming work'},
-  {id:'messages', name:'Messages', desc:'Customer conversations and incoming requests'}
+{id:'overview', name:'Dashboard Overview', desc:'Your key stats and overview'},
+{id:'jobs', name:'Available Jobs', desc:'Jobs available for you to quote'},
+{id:'activity', name:'Nearby Activity', desc:'Map and active jobs near you'},
+{id:'quick', name:'Quick Actions', desc:'Shortcuts to common contractor tools'},
+{id:'earnings', name:'Earnings', desc:'Your earnings and payment information'},
+{id:'schedule', name:'Schedule', desc:'Your upcoming work'},
+{id:'messages', name:'Messages', desc:'Customer conversations and incoming requests'}
 ];
-
 let personalizationOrder = JSON.parse(localStorage.getItem('tradematch_personalization_v1') || 'null')
-  || contractorSections.map(s => s.id);
+|| contractorSections.map(s => s.id);
 let personalizationEnabled = JSON.parse(localStorage.getItem('tradematch_personalization_enabled_v1') || 'null')
-  || contractorSections.reduce((o,s)=>(o[s.id]=true,o),{});
-
+|| contractorSections.reduce((o,s)=>(o[s.id]=true,o),{});
 function openPersonalization(){
-  renderPersonalization();
-  document.getElementById('personalizationModal').style.display='flex';
+renderPersonalization();
+document.getElementById('personalizationModal').style.display='flex';
 }
 function closePersonalization(){
-  document.getElementById('personalizationModal').style.display='none';
+document.getElementById('personalizationModal').style.display='none';
 }
 function renderPersonalization(){
-  const list=document.getElementById('personalizationList');
-  list.innerHTML='';
-  personalizationOrder.forEach((id,i)=>{
-    const s=contractorSections.find(x=>x.id===id);
-    if(!s)return;
-    const row=document.createElement('div');
-    row.style='display:flex;align-items:center;gap:12px;border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#f8fafc;';
-    row.innerHTML=`
-      <input type="checkbox" ${personalizationEnabled[id]?'checked':''} onchange="personalizationEnabled['${s.id}']=this.checked" style="width:18px;height:18px;">
-      <div style="flex:1;"><div style="font-weight:800;">${s.name}</div><div style="font-size:12px;color:#64748b;">${s.desc}</div></div>
-      <button onclick="movePersonalization(${i},-1)" ${i===0?'disabled':''} style="border:0;background:white;border-radius:7px;padding:7px 9px;cursor:pointer;">↑</button>
-      <button onclick="movePersonalization(${i},1)" ${i===personalizationOrder.length-1?'disabled':''} style="border:0;background:white;border-radius:7px;padding:7px;cursor:pointer;">↓</button>`;
-    list.appendChild(row);
-  });
+const list=document.getElementById('personalizationList');
+list.innerHTML='';
+personalizationOrder.forEach((id,i)=>{
+const s=contractorSections.find(x=>x.id===id);
+if(!s)return;
+const row=document.createElement('div');
+row.style='display:flex;align-items:center;gap:12px;border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#f8fafc;';
+row.innerHTML=`
+<input type="checkbox" ${personalizationEnabled[id]?'checked':''} onchange="personalizationEnabled['${s.id}']=this.checked" style="width:18px;height:18px;">
+<div style="flex:1;"><div style="font-weight:800;">${s.name}</div><div style="font-size:12px;color:#64748b;">${s.desc}</div></div>
+<button onclick="movePersonalization(${i},-1)" ${i===0?'disabled':''} style="border:0;background:white;border-radius:7px;padding:7px 9px;cursor:pointer;">↑</button>
+<button onclick="movePersonalization(${i},1)" ${i===personalizationOrder.length-1?'disabled':''} style="border:0;background:white;border-radius:7px;padding:7px;cursor:pointer;">↓</button>`;
+list.appendChild(row);
+});
 }
 function movePersonalization(index,delta){
-  const ni=index+delta;
-  if(ni<0||ni>=personalizationOrder.length)return;
-  [personalizationOrder[index],personalizationOrder[ni]]=[personalizationOrder[ni],personalizationOrder[index]];
-  renderPersonalization();
+const ni=index+delta;
+if(ni<0||ni>=personalizationOrder.length)return;
+[personalizationOrder[index],personalizationOrder[ni]]=[personalizationOrder[ni],personalizationOrder[index]];
+renderPersonalization();
 }
 function resetPersonalization(){
-  personalizationOrder = contractorSections.map(s => s.id);
-  personalizationEnabled = contractorSections.reduce((o,s)=>(o[s.id]=true,o),{});
-  renderPersonalization();
+personalizationOrder = contractorSections.map(s => s.id);
+personalizationEnabled = contractorSections.reduce((o,s)=>(o[s.id]=true,o),{});
+renderPersonalization();
 }
 function savePersonalization(){
-  localStorage.setItem('tradematch_personalization_v1',JSON.stringify(personalizationOrder));
-  localStorage.setItem('tradematch_personalization_enabled_v1',JSON.stringify(personalizationEnabled));
-  closePersonalization();
-  if(typeof showToast==='function') showToast('Dashboard personalization saved');
-  else alert('Dashboard personalization saved.');
+localStorage.setItem('tradematch_personalization_v1',JSON.stringify(personalizationOrder));
+localStorage.setItem('tradematch_personalization_enabled_v1',JSON.stringify(personalizationEnabled));
+closePersonalization();
+if(typeof showToast==='function') showToast('Dashboard personalization saved');
+else alert('Dashboard personalization saved.');
 }
-
 function openContractorProfileMenu(){
-  const existing=document.getElementById('contractorProfileDropdown');
-  if(existing){ existing.remove(); return; }
-  const menu=document.createElement('div');
-  menu.id='contractorProfileDropdown';
-  menu.style='position:absolute;right:18px;top:62px;width:220px;background:white;border:1px solid #e2e8f0;border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.16);z-index:5000;overflow:hidden;';
-  menu.innerHTML=`
-    <div style="padding:13px 15px;border-bottom:1px solid #eef2f7;font-weight:800;">Contractor Account</div>
-    <button onclick="showContractorPage('messages');document.getElementById('contractorProfileDropdown').remove()" style="width:100%;text-align:left;border:0;background:white;padding:13px 15px;cursor:pointer;">✉ Messages <span style="float:right;background:#e5484d;color:white;border-radius:10px;padding:2px 7px;font-size:11px;">3</span></button>
-    <button onclick="openPersonalization();document.getElementById('contractorProfileDropdown').remove()" style="width:100%;text-align:left;border:0;background:white;padding:13px 15px;cursor:pointer;">⚙ Personalize Page <span style="float:right;color:#64748b;font-size:10px;font-weight:800;">CONTRACTOR</span></button>
-    <button onclick="changeContractorPicture();document.getElementById('contractorProfileDropdown').remove()" style="width:100%;text-align:left;border:0;background:white;padding:13px 15px;cursor:pointer;">📷 Change Profile Picture</button>
-    <button onclick="showContractorPage('profile');document.getElementById('contractorProfileDropdown').remove()" style="width:100%;text-align:left;border:0;background:white;padding:13px 15px;cursor:pointer;">👤 View Profile</button>
-    <button onclick="signOutContractor()" style="width:100%;text-align:left;border:0;background:white;padding:13px 15px;cursor:pointer;color:#b42318;">↪ Sign Out</button>`;
-  document.body.appendChild(menu);
+const existing=document.getElementById('contractorProfileDropdown');
+if(existing){ existing.remove(); return; }
+const menu=document.createElement('div');
+menu.id='contractorProfileDropdown';
+menu.style='position:absolute;right:18px;top:62px;width:220px;background:white;border:1px solid #e2e8f0;border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.16);z-index:5000;overflow:hidden;';
+menu.innerHTML=`
+<div style="padding:13px 15px;border-bottom:1px solid #eef2f7;font-weight:800;">Contractor Account</div>
+<button onclick="showContractorPage('messages');document.getElementById('contractorProfileDropdown').remove()" style="width:100%;text-align:left;border:0;background:white;padding:13px 15px;cursor:pointer;">✉ Messages <span style="float:right;background:#e5484d;color:white;border-radius:10px;padding:2px 7px;font-size:11px;">3</span></button>
+<button onclick="openPersonalization();document.getElementById('contractorProfileDropdown').remove()" style="width:100%;text-align:left;border:0;background:white;padding:13px 15px;cursor:pointer;">⚙ Personalize Page <span style="float:right;color:#64748b;font-size:10px;font-weight:800;">CONTRACTOR</span></button>
+<button onclick="changeContractorPicture();document.getElementById('contractorProfileDropdown').remove()" style="width:100%;text-align:left;border:0;background:white;padding:13px 15px;cursor:pointer;">📷 Change Profile Picture</button>
+<button onclick="showContractorPage('profile');document.getElementById('contractorProfileDropdown').remove()" style="width:100%;text-align:left;border:0;background:white;padding:13px 15px;cursor:pointer;">👤 View Profile</button>
+<button onclick="signOutContractor()" style="width:100%;text-align:left;border:0;background:white;padding:13px 15px;cursor:pointer;color:#b42318;">↪ Sign Out</button>`;
+document.body.appendChild(menu);
 }
 function signOutContractor(){
-  localStorage.removeItem('tradematch_contractor_session_v2');
-  location.reload();
+localStorage.removeItem('tradematch_contractor_session_v3');
+location.reload();
 }
 </script>
 
+<input id="contractorProfilePictureInput" type="file" accept="image/" style="display:none;" onchange="handleContractorPicture(event)">
 
-
-
-<input id="contractorProfilePictureInput" type="file" accept="image/*" style="display:none;" onchange="handleContractorPicture(event)">
-
-<script>
-function changeContractorPicture(){
-  const input=document.getElementById('contractorProfilePictureInput');
-  if(input) input.click();
-}
-
-function handleContractorPicture(event){
-  const file=event.target.files && event.target.files[0];
-  if(!file) return;
-  if(!file.type.startsWith('image/')){
-    alert('Please choose an image file.');
-    return;
-  }
-  const reader=new FileReader();
-  reader.onload=function(e){
-    const data=e.target.result;
-    localStorage.setItem('tradematch_contractor_profile_picture_v1',data);
-    applyContractorProfilePicture(data);
-    if(typeof showToast==='function') showToast('Profile picture updated');
-  };
-  reader.readAsDataURL(file);
-}
-
-function applyContractorProfilePicture(data){
-  if(!data) return;
-  const selectors=[
-    '.profile-avatar',
-    '#profileAvatar',
-    '[data-contractor-avatar]'
-  ];
-  selectors.forEach(sel=>{
-    document.querySelectorAll(sel).forEach(el=>{
-      if(el.tagName==='IMG'){
-        el.src=data;
-      }else{
-        el.style.backgroundImage='url("'+data+'")';
-        el.style.backgroundSize='cover';
-        el.style.backgroundPosition='center';
-        el.textContent='';
-      }
-    });
-  });
-}
-
-document.addEventListener('DOMContentLoaded',function(){
-  const saved=localStorage.getItem('tradematch_contractor_profile_picture_v1');
-  if(saved) applyContractorProfilePicture(saved);
-});
-</script>
-
-
-<script>
-function getContractorAccount(){
-  try { return JSON.parse(localStorage.getItem('tradematch_contractor_account_v2') || '{}'); }
-  catch(e){ return {}; }
-}
-function contractorInitials(name){
-  const parts=(name||'').trim().split(/\s+/).filter(Boolean);
-  if(!parts.length) return 'TM';
-  if(parts.length===1) return parts[0].slice(0,2).toUpperCase();
-  return (parts[0][0]+parts[parts.length-1][0]).toUpperCase();
-}
-function updateContractorInitials(){
-  const account=getContractorAccount();
-  const name=account.name || account.fullName || account.displayName || '';
-  const initials=contractorInitials(name);
-  document.querySelectorAll('.profile-avatar, .avatar, [data-contractor-avatar]').forEach(el=>{
-    if(el.tagName==='IMG') return;
-    el.textContent=initials;
-  });
-  document.querySelectorAll('[data-contractor-name]').forEach(el=>{
-    if(name) el.textContent=name;
-  });
-}
-document.addEventListener('DOMContentLoaded', updateContractorInitials);
-</script>
-
-
-<script>
+<style id="contractor-working-features">
+/* Working contractor messaging/profile/personalization UI /
+.contractor-message-layout{display:grid;grid-template-columns:300px 1fr;min-height:520px}
+.contractor-thread-list{border-right:1px solid #edf1f6;background:#fbfcfe}
+.contractor-thread{width:100%;border:0;background:#fff;text-align:left;padding:15px 16px;border-bottom:1px solid #edf1f6;cursor:pointer}
+.contractor-thread:hover,.contractor-thread.active{background:#edf5ff}
+.contractor-thread b{font-size:12px}.contractor-thread small{display:block;color:#718096;font-size:10px;margin-top:4px}
+.contractor-chat{display:flex;flex-direction:column;min-height:520px}
+.contractor-chat-head{padding:15px 18px;border-bottom:1px solid #edf1f6}
+.contractor-chat-head b{font-size:14px}.contractor-chat-head small{display:block;color:#718096;margin-top:4px;font-size:10px}
+.contractor-chat-body{flex:1;padding:18px;overflow:auto;background:#f8fafc}
+.chat-bubble{max-width:75%;padding:10px 13px;border-radius:13px;margin:8px 0;font-size:12px;line-height:1.45}
+.chat-bubble.customer{background:#fff;border:1px solid #e1e8f0;margin-right:auto}
+.chat-bubble.contractor{background:#1769e8;color:#fff;margin-left:auto}
+.chat-time{display:block;font-size:9px;opacity:.65;margin-top:4px}
+.contractor-chat-compose{display:flex;gap:8px;padding:12px;border-top:1px solid #edf1f6;background:#fff}
+.contractor-chat-compose textarea{flex:1;resize:none;border:1px solid #d6e0ec;border-radius:9px;padding:10px;font:inherit;font-size:12px;min-height:42px}
+.contractor-chat-compose button{border:0;background:#1769e8;color:#fff;border-radius:9px;padding:0 15px;font-weight:800}
+.profile-photo-edit{position:relative;display:inline-block}
+.profile-photo-edit button{position:absolute;right:-5px;bottom:-5px;border:2px solid #fff;background:#1769e8;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer}
+@media(max-width:750px){.contractor-message-layout{grid-template-columns:1fr}.contractor-thread-list{border-right:0;max-height:190px;overflow:auto}.contractor-chat{min-height:430px}}
+</style>
+<script id="contractor-working-features-script">
 (function(){
-  function saveSignupName(){
-    const fields=[
-      document.querySelector('#signupName'),
-      document.querySelector('#fullName'),
-      document.querySelector('input[name="name"]'),
-      document.querySelector('input[name="fullName"]'),
-      document.querySelector('input[placeholder*="name" i]')
-    ].filter(Boolean);
-    const field=fields.find(x=>x.value && x.value.trim());
-    if(!field) return;
-    let account={};
-    try { account=JSON.parse(localStorage.getItem('tradematch_contractor_account_v2') || '{}'); } catch(e){}
-    account.name=field.value.trim();
-    localStorage.setItem('tradematch_contractor_account_v2',JSON.stringify(account));
-    if(typeof updateContractorInitials==='function') updateContractorInitials();
-  }
-  document.addEventListener('click',function(e){
-    const t=e.target;
-    if(t && /sign.?up|create account|create account/i.test((t.textContent||''))) {
-      setTimeout(saveSignupName,50);
-    }
-  });
-  document.addEventListener('submit',function(){ setTimeout(saveSignupName,50); });
+const ACCOUNT_KEY='tradematch_contractor_account_v3';
+const PIC_KEY='tradematch_contractor_profile_picture_v1';
+const MSG_KEY='tradematch_contractor_messages_v1';
+const P_ORDER='tradematch_personalization_v1';
+const P_ENABLED='tradematch_personalization_enabled_v1';
+const defaultMessages={
+sarah:{name:'Sarah Johnson',initials:'SJ',subject:'Kitchen outlet repair',messages:[
+{from:'customer',text:'Are you available tomorrow morning?',time:'9:14 AM'},
+{from:'customer',text:'I can do 9:00 AM if that works for you.',time:'9:18 AM'}
+]},
+mark:{name:'Mark Davis',initials:'MD',subject:'AC service',messages:[
+{from:'customer',text:'Thanks for the quick quote.',time:'Yesterday'},
+{from:'customer',text:'I would like to move forward with the repair.',time:'Yesterday'}
+]},
+emily:{name:'Emily Carter',initials:'EC',subject:'Water heater',messages:[
+{from:'customer',text:'Can we move the appointment to Friday?',time:'Tuesday'},
+{from:'customer',text:'Friday afternoon would work best for me.',time:'Tuesday'}
+]}
+};
+function getAccount(){
+try{return JSON.parse(localStorage.getItem(ACCOUNT_KEY)||'{}')}catch(e){return {}}
+}
+function saveAccount(a){localStorage.setItem(ACCOUNT_KEY,JSON.stringify(a))}
+function getMessages(){
+try{
+const x=JSON.parse(localStorage.getItem(MSG_KEY)||'null');
+if(x) return x;
+}catch(e){}
+localStorage.setItem(MSG_KEY,JSON.stringify(defaultMessages));
+return JSON.parse(JSON.stringify(defaultMessages));
+}
+let messages=getMessages(), activeThread='sarah';
+function accountName(){return getAccount().name||'Jake Miller'}
+function initials(name){
+const p=(name||'').trim().split(/\s+/).filter(Boolean);
+return p.length>1?(p[0][0]+p[p.length-1][0]).toUpperCase():(p[0]||'TM').slice(0,2).toUpperCase();
+}
+function setText(sel,val){document.querySelectorAll(sel).forEach(e=>e.textContent=val)}
+function applyProfile(){
+const a=getAccount(), name=a.name||'Jake Miller';
+setText('[data-contractor-name]',name);
+setText('#pageProfile .profile-edit-top h2',name);
+setText('#pageProfile .profile-edit-top p',(a.trade||'Licensed Electrician')+' · '+(a.serviceArea||'Louisville, KY'));
+setText('.dash-head h1','Good morning, '+name.split(' ')[0]+'!');
+document.querySelectorAll('.avatar,.profile-avatar,#pageProfile .profile-edit-top img').forEach(img=>{
+const pic=localStorage.getItem(PIC_KEY);
+if(pic && img.tagName==='IMG') img.src=pic;
+img.alt=name+' profile picture';
+});
+const drop=document.querySelector('.profile-dropdown-head');
+if(drop){
+const strong=drop.querySelector('strong'), span=drop.querySelector('span'), img=drop.querySelector('img');
+if(strong) strong.textContent=name;
+if(span) span.textContent=a.trade||'Licensed Electrician';
+const pic=localStorage.getItem(PIC_KEY); if(pic&&img) img.src=pic;
+}
+const profileInputs=document.querySelectorAll('#pageProfile .edit-grid input,#pageProfile .edit-grid textarea,#pageProfile .edit-grid select');
+if(profileInputs.length){
+const vals=[a.businessName||name+' Electrical',a.trade||'Electrical',a.serviceArea||'Louisville, KY',a.hourlyRate||'$95 / hour',a.about||'Licensed electrician serving Louisville homeowners with residential electrical repairs, installations, and troubleshooting.'];
+profileInputs.forEach((el,i)=>{if(vals[i]!=null) el.value=vals[i]});
+}
+}
+window.saveContractorProfile=function(){
+const els=document.querySelectorAll('#pageProfile .edit-grid input,#pageProfile .edit-grid textarea,#pageProfile .edit-grid select');
+if(els.length<6)return;
+const old=getAccount();
+const a=Object.assign({},old,{
+name:document.getElementById('contractorFullName')?.value.trim()||old.name||'Jake Miller',
+businessName:els[1].value.trim(), trade:els[2].value, serviceArea:els[3].value.trim(),
+hourlyRate:els[4].value.trim(), about:els[5].value.trim()
+});
+saveAccount(a); applyProfile(); showToast('Profile changes saved');
+};
+window.openContractorThread=function(id){
+activeThread=id; renderMessages();
+};
+function renderMessages(){
+const host=document.getElementById('pageMessages');
+if(!host)return;
+const list=Object.entries(messages).map(([id,t])=>`
+<button class="contractor-thread ${id===activeThread?'active':''}" onclick="openContractorThread('${id}')">
+<b>${t.name}</b><small>${t.subject}</small><small>${t.messages[t.messages.length-1]?.text||''}</small>
+</button>`).join('');
+const t=messages[activeThread]||messages.sarah;
+const bubbles=t.messages.map(m=>`<div class="chat-bubble ${m.from==='contractor'?'contractor':'customer'}">${escapeHtml(m.text)}<span class="chat-time">${escapeHtml(m.time||'')}</span></div>`).join('');
+host.innerHTML=`<div class="panel" style="margin-top:20px;overflow:hidden">
+<div class="panel-head">Messages <span style="color:#1769e8;font-size:11px">${Object.keys(messages).length} conversations</span></div>
+<div class="contractor-message-layout">
+<div class="contractor-thread-list">${list}</div>
+<div class="contractor-chat">
+<div class="contractor-chat-head"><b>${t.name}</b><small>${t.subject}</small></div>
+<div class="contractor-chat-body" id="contractorChatBody">${bubbles}</div>
+<div class="contractor-chat-compose">
+<textarea id="contractorReply" placeholder="Reply to ${t.name}..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendContractorReply()}"></textarea>
+<button onclick="sendContractorReply()">Send</button>
+</div>
+</div>
+</div>
+</div>`;
+const body=document.getElementById('contractorChatBody'); if(body) body.scrollTop=body.scrollHeight;
+}
+function escapeHtml(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+window.sendContractorReply=function(){
+const input=document.getElementById('contractorReply'), text=input?.value.trim();
+if(!text)return showToast('Write a reply first');
+const t=messages[activeThread];
+t.messages.push({from:'contractor',text,time:new Date().toLocaleTimeString([], {hour:'numeric',minute:'2-digit'})});
+localStorage.setItem(MSG_KEY,JSON.stringify(messages));
+renderMessages(); showToast('Reply sent to '+t.name);
+};
+function applyPersonalization(){
+const order=JSON.parse(localStorage.getItem(P_ORDER)||'null')||['overview','jobs','activity','quick','earnings','schedule','messages'];
+const enabled=JSON.parse(localStorage.getItem(P_ENABLED)||'null')||{};
+const dash=document.querySelector('.contractor .dash');
+if(!dash)return;
+const map={
+overview:document.querySelector('.contractor .metrics'),
+jobs:document.querySelector('.contractor .dashboard-grid > .panel'),
+activity:document.querySelector('.contractor .nearby-card'),
+quick:document.querySelector('.contractor .right-stack .panel:last-child')
+};
+// Only dashboard widgets are moved here; full-page tabs remain in the sidebar.
+const grid=document.querySelector('.contractor .dashboard-grid');
+if(grid){
+const left=grid.children[0], right=grid.children[1];
+order.filter(id=>['jobs','activity','quick'].includes(id)).forEach(id=>{
+const el=map[id]; if(!el)return;
+if(id==='jobs')left.appendChild(el);
+else right.appendChild(el);
+el.style.display=enabled[id]===false?'none':'';
+});
+}
+if(map.overview)map.overview.style.display=enabled.overview===false?'none':'';
+}
+window.savePersonalization=(function(original){
+return function(){
+localStorage.setItem(P_ORDER,JSON.stringify(personalizationOrder));
+localStorage.setItem(P_ENABLED,JSON.stringify(personalizationEnabled));
+closePersonalization(); applyPersonalization();
+showToast('Dashboard personalization saved');
+}
+})(window.savePersonalization);
+// Make the personalization controls update the live page when arrows are used.
+const oldMove=window.movePersonalization;
+window.movePersonalization=function(i,d){oldMove(i,d);applyPersonalization()};
+// Patch contractor page navigation so messages/profile always render correctly.
+const oldShow=window.showContractorPage;
+window.showContractorPage=function(page){
+oldShow(page);
+if(page==='messages')setTimeout(renderMessages,20);
+if(page==='profile')setTimeout(applyProfile,20);
+applyPersonalization();
+};
+document.addEventListener('DOMContentLoaded',()=>{
+applyProfile();
+applyPersonalization();
+renderMessages();
+// Replace the profile save button's demo action with the real save function.
+const save=document.querySelector('#pageProfile .save-profile');if(save)save.onclick=saveContractorProfile;
+// Add a real photo button to the profile card.
+const top=document.querySelector('#pageProfile .profile-edit-top');
+if(top&&!top.querySelector('.profile-photo-edit')){
+const img=top.querySelector('img');
+if(img){
+const wrap=document.createElement('div');wrap.className='profile-photo-edit';
+img.parentNode.insertBefore(wrap,img);wrap.appendChild(img);
+const b=document.createElement('button');b.type='button';b.textContent='📷';b.title='Change profile picture';b.onclick=changeContractorPicture;wrap.appendChild(b);
+}
+}
+});
 })();
 </script>
 
+<style id="personal-contractor-onboarding-style">
+#contractorOnboardingOverlay{position:fixed;inset:0;background:rgba(7,20,39,.62);z-index:99999;display:none;align-items:center;justify-content:center;padding:20px}
+#contractorOnboardingOverlay.open{display:flex}
+.contractor-onboarding-card{width:min(620px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:22px;box-shadow:0 24px 80px rgba(0,0,0,.28);padding:28px}
+.contractor-onboarding-card h2{margin:0 0 7px;font-family:'Space Grotesk',sans-serif;color:#0b2545;font-size:27px}
+.contractor-onboarding-card .lead{margin:0 0 22px;color:#64748b;line-height:1.5}
+.onboarding-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.onboarding-field{display:flex;flex-direction:column;gap:7px}
+.onboarding-field.full{grid-column:1/-1}
+.onboarding-field label{font-size:12px;font-weight:850;color:#334155}
+.onboarding-field input,.onboarding-field textarea,.onboarding-field select{width:100%;box-sizing:border-box;border:1px solid #d7e0ea;border-radius:11px;padding:11px 12px;font:inherit;outline:none;background:#fff}
+.onboarding-field textarea{min-height:115px;resize:vertical}
+.onboarding-field input:focus,.onboarding-field textarea:focus,.onboarding-field select:focus{border-color:#3180ff;box-shadow:0 0 0 3px rgba(49,128,255,.10)}
+.onboarding-photo{display:flex;align-items:center;gap:15px;padding:14px;border:1px dashed #cbd5e1;border-radius:14px;background:#f8fafc}
+.onboarding-avatar{width:70px;height:70px;border-radius:50%;object-fit:cover;display:grid;place-items:center;flex:0 0 70px;background:#0b2545;color:#fff;font-weight:900;font-size:20px;overflow:hidden}
+.onboarding-avatar img{width:100%;height:100%;object-fit:cover}
+.onboarding-photo-info{font-size:12px;color:#64748b;line-height:1.45}.onboarding-photo-info b{display:block;color:#334155;margin-bottom:3px}
+.onboarding-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid #edf1f5}
+.onboarding-actions button{border-radius:11px;padding:11px 16px;font-weight:850;cursor:pointer}
+.onboarding-skip{border:1px solid #d7e0ea;background:#fff;color:#334155}.onboarding-save{border:0;background:#1769e8;color:#fff}
+@media(max-width:620px){.onboarding-grid{grid-template-columns:1fr}.onboarding-field.full{grid-column:auto}.onboarding-actions{flex-direction:column}.onboarding-actions button{width:100%}}
+</style>
+<div id="contractorOnboardingOverlay" aria-hidden="true">
+<div class="contractor-onboarding-card" role="dialog" aria-modal="true" aria-labelledby="contractorOnboardingTitle">
+<h2 id="contractorOnboardingTitle">Set up your contractor profile</h2>
+<p class="lead">Make your TradeMatch page yours. Add your company, bio, and profile photo now, or skip and finish it later from <b>View Profile</b>.</p>
+<div class="onboarding-grid">
+<div class="onboarding-field"><label for="onboardingFullName">Your Name</label><input id="onboardingFullName" type="text"></div>
+<div class="onboarding-field"><label for="onboardingCompany">Company Name</label><input id="onboardingCompany" type="text" placeholder="Your company name"></div>
+<div class="onboarding-field"><label for="onboardingTrade">Trade</label><select id="onboardingTrade"><option value="">Choose a trade</option><option>Plumbing</option><option>Electrical</option><option>HVAC</option><option>Handyman</option><option>Roofing</option><option>Painting</option></select></div>
+<div class="onboarding-field"><label for="onboardingArea">Service Area</label><input id="onboardingArea" type="text" placeholder="Louisville, KY"></div>
+<div class="onboarding-field full"><label for="onboardingBio">Your Bio</label><textarea id="onboardingBio" placeholder="Tell customers who you are, what you do, your experience, and what makes your services useful."></textarea></div>
+<div class="onboarding-field full"><label>Profile Picture</label><div class="onboarding-photo"><div id="onboardingAvatar" class="onboarding-avatar">TM</div><div class="onboarding-photo-info"><b>Add a profile picture</b>Upload a photo of yourself. If you skip the photo, TradeMatch will automatically use your initials.</div><button type="button" class="onboarding-skip" onclick="document.getElementById('onboardingPictureInput').click()">Choose Image</button><input id="onboardingPictureInput" type="file" accept="image/" style="display:none" onchange="previewOnboardingPicture(event)"></div></div>
+</div>
+<div class="onboarding-actions"><button type="button" class="onboarding-skip" onclick="skipContractorOnboarding()">Skip for now</button><button type="button" class="onboarding-save" onclick="saveContractorOnboarding()">Save My Profile</button></div>
+</div>
+</div>
+<script id="personal-contractor-onboarding-script">
+(function(){
+const A='tradematch_contractor_account_v3';
+const S='tradematch_contractor_session_v3';
+const PIC='tradematch_contractor_profile_picture_v1';
+let pendingPicture='';
+function readAccount(){try{return JSON.parse(localStorage.getItem(A)||'{}')}catch(e){return {}}}
+function writeAccount(a){localStorage.setItem(A,JSON.stringify(a))}
+function initials(name){
+const p=String(name||'').trim().split(/\s+/).filter(Boolean);
+if(!p.length)return 'TM';
+return p.length===1?p[0].slice(0,2).toUpperCase():(p[0][0]+p[p.length-1][0]).toUpperCase();
+}
+function initialsData(name){
+const txt=initials(name), svg=`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><rect width="160" height="160" rx="80" fill="#0b2545"/><text x="80" y="92" text-anchor="middle" font-family="Arial,sans-serif" font-size="52" font-weight="700" fill="white">${txt}</text></svg>`;
+return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
+}
+function pictureFor(a){return a.profilePicture||localStorage.getItem(PIC)||initialsData(a.name||'TradeMatch')}
+function setValue(id,v){const e=document.getElementById(id);if(e)e.value=v||''}
+function refreshOnboardingPreview(){
+const a=readAccount(), name=document.getElementById('onboardingFullName')?.value||a.name||'';
+const box=document.getElementById('onboardingAvatar');if(!box)return;
+const src=pendingPicture||pictureFor(Object.assign({},a,{name}));
+box.innerHTML='<img src="'+src+'" alt="Profile preview">';
+}
+window.previewOnboardingPicture=function(e){
+const f=e.target.files&&e.target.files[0];if(!f)return;
+if(!f.type.startsWith('image/'))return alert('Please choose an image file.');
+const r=new FileReader();r.onload=function(ev){pendingPicture=ev.target.result;refreshOnboardingPreview()};r.readAsDataURL(f);
+};
+window.openContractorOnboarding=function(){
+const a=readAccount();pendingPicture=a.profilePicture||localStorage.getItem(PIC)||'';
+setValue('onboardingFullName',a.name);setValue('onboardingCompany',a.businessName);setValue('onboardingTrade',a.trade);setValue('onboardingArea',a.serviceArea);setValue('onboardingBio',a.about);refreshOnboardingPreview();
+const o=document.getElementById('contractorOnboardingOverlay');if(o){o.classList.add('open');o.setAttribute('aria-hidden','false')}
+};
+function close(){const o=document.getElementById('contractorOnboardingOverlay');if(o){o.classList.remove('open');o.setAttribute('aria-hidden','true')}}
+window.skipContractorOnboarding=function(){
+const a=readAccount();a.profileSetupSkipped=true;writeAccount(a);applyPersonalData();close();if(typeof showToast==='function')showToast('Profile saved. You can finish it later from View Profile.');
+};
+window.saveContractorOnboarding=function(){
+const a=readAccount();
+a.name=(document.getElementById('onboardingFullName')?.value||a.name||'').trim();
+a.businessName=(document.getElementById('onboardingCompany')?.value||'').trim();
+a.trade=document.getElementById('onboardingTrade')?.value||'';
+a.serviceArea=(document.getElementById('onboardingArea')?.value||'').trim();
+a.about=(document.getElementById('onboardingBio')?.value||'').trim();
+a.profilePicture=pendingPicture||'';
+a.profileSetupSkipped=false;
+writeAccount(a);
+if(pendingPicture)localStorage.setItem(PIC,pendingPicture);else localStorage.removeItem(PIC);
+applyPersonalData();close();if(typeof showToast==='function')showToast('Your contractor profile is ready.');
+};
+function applyPersonalData(){
+const a=readAccount(), name=a.name||'Contractor', company=a.businessName||'Your Company';
+const trade=a.trade||'Contractor', area=a.serviceArea||'Louisville, KY', pic=pictureFor(a);
+document.querySelectorAll('[data-contractor-name]').forEach(e=>e.textContent=name);
+document.querySelectorAll('.profile-dropdown-head strong').forEach(e=>e.textContent=name);
+document.querySelectorAll('.profile-dropdown-head span').forEach(e=>e.textContent=company);
+document.querySelectorAll('.avatar,.profile-avatar,#pageProfile .profile-edit-top img').forEach(img=>{img.src=pic;img.alt=name+' profile picture'});
+document.querySelectorAll('.dash-head h1').forEach(e=>e.textContent='Good morning, '+name.split(/\s+/)[0]+'!');
+const title=document.getElementById('pageProfile')?.querySelector('.profile-edit-top h2');if(title)title.textContent=name;
+const sub=document.getElementById('pageProfile')?.querySelector('.profile-edit-top p');if(sub)sub.textContent=(trade||'Contractor')+' · '+area;
+const inputs=document.querySelectorAll('#pageProfile .edit-grid input,#pageProfile .edit-grid textarea,#pageProfile .edit-grid select');
+if(inputs.length>=6){
+const vals=[name,company,trade,area,a.hourlyRate||'',a.about||''];
+inputs.forEach((el,i)=>{if(vals[i]!==undefined)el.value=vals[i]});
+}
+document.querySelectorAll('[data-contractor-company]').forEach(e=>e.textContent=company);
+document.querySelectorAll('[data-contractor-trade]').forEach(e=>e.textContent=trade);
+document.querySelectorAll('[data-contractor-bio]').forEach(e=>e.textContent=a.about||'Add your bio from View Profile.');
+}
+window.getContractorAccount=function(){return readAccount()};
+window.contractorInitials=initials;
+window.applyProfile=applyPersonalData;
+// Replace signup with the profile-aware flow while keeping the existing email/password requirements.
+window.createContractorAccount=function(){
+const n=document.getElementById('contractorSignupName').value.trim();
+const e=document.getElementById('contractorSignupEmail').value.trim().toLowerCase();
+const p=document.getElementById('contractorSignupPassword').value;
+const c=document.getElementById('contractorSignupConfirm').value;
+const err=document.getElementById('contractorSignupError'), ok=document.getElementById('contractorSignupSuccess');
+if(err)err.style.display='none';if(ok)ok.style.display='none';
+if(!n)return err&&(err.textContent='Please enter your full name.',err.style.display='block');
+if(!e)return err&&(err.textContent='Please enter an email.',err.style.display='block');
+if(!p)return err&&(err.textContent='Please enter a password.',err.style.display='block');
+if(p!==c)return err&&(err.textContent='The passwords do not match.',err.style.display='block');
+const old=readAccount();if(old.email&&old.email===e)return err&&(err.textContent='An account with this email already exists. Please log in.',err.style.display='block');
+const newAccount={name:n,email:e,password:p,businessName:'',trade:'',serviceArea:'',hourlyRate:'',about:'',profilePicture:'',profileSetupSkipped:false};
+writeAccount(newAccount);
+try{
+const registryKey='tradematch_contractor_accounts_v1';
+const registry=JSON.parse(localStorage.getItem(registryKey)||'[]');
+const idx=registry.findIndex(a=>String(a.email||'').toLowerCase()===e);
+if(idx>=0) registry[idx]=newAccount; else registry.push(newAccount);
+localStorage.setItem(registryKey,JSON.stringify(registry));
+}catch(regErr){}
+localStorage.setItem('tradematch_demo_login_email',e);localStorage.setItem(S,'true');
+document.getElementById('contractorAuthScreen').classList.add('auth-hidden');
+setTimeout(openContractorOnboarding,100);
+};
+window.contractorPortalLogin=function(){
+const e=document.getElementById('contractorLoginEmail').value.trim().toLowerCase(),p=document.getElementById('contractorLoginPassword').value;
+const err=document.getElementById('contractorLoginError');if(err)err.style.display='none';
+if(!e||!p){if(err){err.textContent='Enter your email and password to continue.';err.style.display='block'}return}
+let a=readAccount();
+if(!a.email||a.email===e){a=Object.assign({},a,{email:e});writeAccount(a)}
+localStorage.setItem(S,'true');localStorage.setItem('tradematch_demo_login_email',e);document.getElementById('contractorAuthScreen').classList.add('auth-hidden');
+setTimeout(function(){applyPersonalData();if(!a.profileSetupSkipped&&!a.profileSetupComplete&&(!a.businessName||!a.about||!a.profilePicture))openContractorOnboarding()},100);
+};
+document.addEventListener('DOMContentLoaded',function(){
+const a=readAccount();applyPersonalData();
+if(localStorage.getItem(S)==='true'&&!a.profileSetupSkipped&&!a.profileSetupComplete&&(!a.businessName||!a.about||!a.profilePicture))setTimeout(openContractorOnboarding,250);
+});
+})();
+</script>
+<style id="profile-photo-upload-final-style">
+.profile-photo-edit{position:relative;width:92px;height:92px;flex:0 0 92px}
+.profile-photo-edit>img{width:92px!important;height:92px!important;border-radius:50%;object-fit:cover;display:block}
+.profile-photo-change{position:absolute;right:-3px;bottom:-3px;width:31px;height:31px;border:2px solid #fff;border-radius:50%;background:#1769e8;color:#fff;cursor:pointer;font-size:14px;box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.profile-photo-text-button{border:1px solid #d7e0ea;background:#fff;color:#1769e8;border-radius:9px;padding:7px 10px;font-weight:800;cursor:pointer}
+</style>
+<script id="profile-photo-upload-final-script">
+(function(){
+const A='tradematch_contractor_account_v3', PIC='tradematch_contractor_profile_picture_v1';
+function account(){try{return JSON.parse(localStorage.getItem(A)||'{}')}catch(e){return {}}}
+function save(a){localStorage.setItem(A,JSON.stringify(a))}
+function initials(name){const p=String(name||'').trim().split(/\s+/).filter(Boolean);if(!p.length)return 'TM';return p.length===1?p[0].slice(0,2).toUpperCase():(p[0][0]+p[p.length-1][0]).toUpperCase()}
+function initialsData(name){const t=initials(name);const svg='<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><rect width="160" height="160" rx="80" fill="#0b2545"/><text x="80" y="96" text-anchor="middle" font-family="Arial,sans-serif" font-size="52" font-weight="700" fill="white">'+t+'</text></svg>';return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg)}
+function fallback(a){return initialsData(a.name||'TradeMatch')}
+function apply(){
+const a=account(), pic=a.profilePicture||localStorage.getItem(PIC)||fallback(a), name=a.name||'Contractor';
+document.querySelectorAll('.avatar,.profile-avatar,#pageProfile .profile-edit-top img,.profile-dropdown-head img,[data-contractor-avatar]').forEach(el=>{
+if(el.tagName==='IMG'){el.src=pic;el.alt=name+' profile picture'}
+else {el.style.backgroundImage='url("'+pic.replace(/"/g,'%22')+'")';el.style.backgroundSize='cover';el.style.backgroundPosition='center';el.textContent=''}
+});
+}
+window.changeContractorPicture=function(){const input=document.getElementById('contractorProfilePictureInput');if(input){input.value='';input.click()}};
+window.handleContractorPicture=function(e){
+const f=e.target.files&&e.target.files[0];if(!f)return;
+if(!f.type.startsWith('image/')){alert('Please choose an image file.');return}
+const r=new FileReader();
+r.onload=function(ev){
+const data=ev.target.result,a=account();
+a.profilePicture=data;a.profileSetupSkipped=false;a.profileSetupComplete=true;save(a);localStorage.setItem(PIC,data);
+apply();
+if(typeof window.applyProfile==='function')window.applyProfile();
+if(typeof window.showToast==='function')window.showToast('Profile picture uploaded successfully');
+};
+r.readAsDataURL(f);
+};
+window.clearContractorPicture=function(){
+const a=account();a.profilePicture='';save(a);localStorage.removeItem(PIC);apply();if(typeof window.applyProfile==='function')window.applyProfile();if(typeof window.showToast==='function')window.showToast('Profile picture removed — your initials are now showing');
+};
+// Make onboarding selection immediately persist as the account photo once saved.
+const originalPreview=window.previewOnboardingPicture;
+window.previewOnboardingPicture=function(e){
+if(originalPreview)originalPreview(e);
+const f=e.target.files&&e.target.files[0];if(!f||!f.type.startsWith('image/'))return;
+const r=new FileReader();r.onload=function(ev){
+const a=account();a.profilePicture=ev.target.result;save(a);localStorage.setItem(PIC,ev.target.result);apply();
+};r.readAsDataURL(f);
+};
+document.addEventListener('DOMContentLoaded',apply);
+})();
+</script>
 </body>
 </html>
